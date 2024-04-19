@@ -1,0 +1,47 @@
+:root {
+	--list-padding: 10px;
+	--list-margin: 1em;
+	--form-part-padding: 0.5rem;
+}
+
+/* TODO: find better font, if there is */
+* {
+	font-family: "Times", "arial";
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+p,
+body,
+header,
+main,
+footer,
+h1,
+h2,
+h3 {
+	padding: 0;
+	margin: 0;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+.footer {
+	padding: 1em;
+	text-align: center;
+}
+
+.no-border {
+	border: none;
+}
+
+.point-to-other-page {
+	color: black;
+	text-decoration: underline;
+}
