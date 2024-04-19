@@ -1,0 +1,2 @@
+# ignores everything that is a ".txt"
+*.txt
