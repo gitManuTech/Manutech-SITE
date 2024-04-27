@@ -57,7 +57,8 @@ $course		= $_SESSION["scourse"];
 				<ol class="navbar">
 
 					<li><a href="logoff.php">Deslogar</a></li>
-<!--TODO: CREATE "account-config.php" file-->
+
+					<!--TODO: CREATE "account-config.php" file-->
 					<li><a href="account-config.php">Configurar Conta</a></li>
 
 				</ol>
@@ -66,7 +67,7 @@ $course		= $_SESSION["scourse"];
 
 		</header>
 
-		<main>
+		<main class="main">
 
 <?php // TODO: create function to select all of the problems that the user has made ?>
 			<div id="user-problems"></div>
@@ -80,7 +81,7 @@ $course		= $_SESSION["scourse"];
 
 			<section id="see-posts">
 
-				<p><a href="posts.php">Ver reclamações de outros alunos</a></p>
+				<p><a href="home.php">Ver reclamações de outros alunos</a></p>
 
 			</section>
 

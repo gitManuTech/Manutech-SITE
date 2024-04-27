@@ -22,6 +22,12 @@ session_start();
 
 		<header class="header">
 
+			<div class="header-img-container">
+
+				<img src="#" alt="Handyman logo" id="logo">
+
+			</div>
+
 			<div class="header-title">
 
 				<h2>Faça a sua reclamação</h2>
@@ -49,7 +55,7 @@ session_start();
 
 					<div class="form-part problem-title">
 
-						<!-- TODO: Make the input better: filter stuff on JS... -->
+						<!-- TODO: Make the input better: filter stuff with JS... -->
 						<label for="problem-title">Resumo do problema</label>
 						<input type="text" id="problem-title"  class="complain-title" name="problem-title" placeholder="Titulo do problema" maxlength="32" autofocus required>
 
@@ -69,11 +75,15 @@ session_start();
 
 					<div class="form-part">
 
-						<!-- TODO: Verify <textarea>'s length on Javascript, later down the line  -->
-						<!-- TODO: We'll might need to resize later down the problem size -->
-						<label for="problem-description">Descreva o problema</label>
+						<div class="problem-area">
 
-						<textarea id="problem-description" class="complain-description" name="problem-descriptor" placeholder="Dê uma descrição detalhada ao problema" maxlength="255" required></textarea>
+							<!-- TODO: Verify <textarea>'s length on Javascript, later down the line  -->
+							<label for="problem-description">Descreva o problema</label>
+
+							<!-- TODO: We might need to resize it later down -->
+							<textarea id="problem-description" class="complain-description" name="problem-descriptor" placeholder="Dê uma descrição detalhada ao problema" maxlength="255" required></textarea>
+
+						</div>
 
 						<div id="submit-btn-container">
 
