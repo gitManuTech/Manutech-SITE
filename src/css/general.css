@@ -1,12 +1,12 @@
 :root {
-	--list-padding: 10px;
+	--list-padding: 0.75rem;
 	--list-margin: 1em;
 	--form-part-padding: 0.5rem;
 }
 
 /* TODO: find better font, if there is */
 * {
-	font-family: "Times", "arial";
+	font-family: "Times New Roman", Arial;
 }
 
 *,

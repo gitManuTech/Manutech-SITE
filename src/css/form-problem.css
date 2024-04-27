@@ -66,6 +66,13 @@ textarea {
 	width: 34.375%;
 }
 
+.problem-area {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .complain-description {
+	width: 54rem;
 	height: 6rem;
 }
