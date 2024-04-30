@@ -1,2 +1,5 @@
 # ignores everything that is a ".txt"
 *.txt
+
+# ignores "db-connect.php"
+src/php/db-connect.php
