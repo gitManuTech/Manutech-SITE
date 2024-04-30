@@ -2,7 +2,7 @@
 
 session_start();
 
-require "./db-connect.php";
+require_once "db-queries.php";
 
 /*
  * No máximo do máximo a gente somente vai precisar somente verificar se
@@ -11,22 +11,6 @@ require "./db-connect.php";
 
 function is_info_in_db(string $student_info, string $db_data): bool {
 	return ($student_info === $db_data);
-}
-
-// TODO: make this line less than 80 characters
-// https://www.php.net/manual/en/mysqli-result.fetch-assoc.php#refsect1-mysqli-result.fetch-assoc-returnvalues
-function get_student_credentials(string $sname, string $sclass, string $scourse): array {
-	$mysql	= connect_db();
-	$select	= "SELECT student_name, student_classroom, student_course
-		FROM student_tbl WHERE
-		student_name = '".$sname."'
-		AND student_classroom = '".$sclass."'
-		AND student_course = '".$scourse."'";
-
-	$query	= $mysql->query($select);
-	$data	= $query->fetch_assoc();
-
-	return $data;
 }
 
 // tmp solution
