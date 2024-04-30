@@ -41,4 +41,8 @@ function insert_into_db(string $sname, string $room, string $course): void {
 	$mysql->close();
 }
 
+function is_info_in_db(string $student_info, string $db_data): bool {
+	return ($student_info === $db_data);
+}
+
 ?>
