@@ -9,10 +9,6 @@ require_once "db-queries.php";
  * as informações cadastras no banco de dados
  * */
 
-function is_info_in_db(string $student_info, string $db_data): bool {
-	return ($student_info === $db_data);
-}
-
 // tmp solution
 // TODO: make it better
 if(empty($_POST["student-name"]) || empty($_POST["student-classroom"]) || empty($_POST["student-course"])) {
