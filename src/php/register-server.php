@@ -4,14 +4,13 @@ session_start();
 
 require_once "db-queries.php";
 
-// TODO: create DIR with functions to insert data into DB
 // TODO: Remove "query" and replace it with "prepare" statements
 
 $name		= $_POST["student-name"];
 $classroom	= $_POST["student-classroom"];
 $course		= $_POST["student-course"];
 
-if(is_student_registered($name, $classroom, $course) >= 1) {
+if(is_student_registered($name, $classroom, $course) == 1) {
 	echo "Usuário já possui conta.";
 	exit(1);
 }

@@ -49,6 +49,7 @@
 
 		</footer>
 
+	<script type="text/js" src="../js/account-config.js"></script>
 	</body>
 
 </html>

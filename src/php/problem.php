@@ -105,6 +105,7 @@ session_start();
 
 		</footer>
 
+	<script type="text/js" src="../js/problem-found-client.js"></script>
 	</body>
 
 </html>
