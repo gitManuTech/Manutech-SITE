@@ -3,11 +3,7 @@
 session_start();
 
 require_once "db-queries.php";
-
-/*
- * No máximo do máximo a gente somente vai precisar somente verificar se
- * as informações cadastras no banco de dados
- * */
+require_once "db-query-check.php";
 
 // tmp solution
 // TODO: make it better
@@ -19,10 +15,13 @@ $name	= $_POST["student-name"];
 $class	= $_POST["student-classroom"];
 $course = $_POST["student-course"];
 
-$student = get_student_credentials($name, $class, $course);
-
-if(!$student) {
+if(is_student_registered($name, $class, $course) == 0) {
 	echo "Estundate não está registrado.";
+	exit(0);
+}
+
+if(is_student_acc_disabled($name)) {
+	echo "Conta do estudante foi desabilitada.";
 	exit(0);
 }
 
