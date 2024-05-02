@@ -58,7 +58,6 @@ $course		= $_SESSION["scourse"];
 
 					<li><a href="logoff.php">Deslogar</a></li>
 
-					<!--TODO: CREATE "account-config.php" file-->
 					<li><a href="account-config.php">Configurar Conta</a></li>
 
 				</ol>
