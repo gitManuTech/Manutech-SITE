@@ -1,6 +1,7 @@
 <?php
 
 require_once "db-connect.php";
+require_once "db-query-check.php";
 
 function get_credentials(string $sname, string $sclass, string $scourse)
 : mysqli_result | bool {

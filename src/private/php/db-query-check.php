@@ -27,7 +27,7 @@ function is_student_acc_disabled(string $sname): bool {
 	$query		= $mysql->query($select_status);
 	$acc_status	= $query->fetch_array(MYSQLI_NUM);
 
-	return ((intval($acc_status)) ? true : false);
+	return (intval($acc_status) === 0);
 }
 
 function is_info_in_db(string $student_info, string $db_data): bool {
