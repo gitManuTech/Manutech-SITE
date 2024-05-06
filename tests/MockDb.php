@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 use PHPUnit\Framework\TestCase;
 
-require_once __DIR__."/../src/php/db-queries.php";
+require_once __DIR__."/../src/private/php/db-queries.php";
 
 final class MockDb extends TestCase
 {
