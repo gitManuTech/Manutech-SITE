@@ -9,12 +9,12 @@ function prepReq(dataToSend) {
 	return reqMsg;
 }
 
-export function sendReq(userData, fileToProcess, method = "GET") {
+export function sendReq(userData, fileToProcess, contentType = "multipart/form-data", method = "GET") {
 	const req = prepReq(userData);
 	const xhr = new XMLHttpRequest();
 
 	xhr.open(method, fileToProcess, true);
-	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	xhr.setRequestHeader("Content-Type", contentType);
 
 	xhr.onload = () => {
 		if(!xhr.responseURL) {
