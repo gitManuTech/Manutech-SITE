@@ -1,4 +1,4 @@
-export { getStudentData } from "../../private/js/student-data.js";
+import { getStudentData } from "../../private/js/student-data.js";
 import { sendReq } from "../../private/js/send-server.js";
 
 document.getElementById("student-form").addEventListener("submit", mkLoginReq, true);
