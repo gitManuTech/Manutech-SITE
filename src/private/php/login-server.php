@@ -5,15 +5,17 @@ session_start();
 require_once "db-queries.php";
 require_once "db-query-check.php";
 
-// tmp solution
-// TODO: make it better
-if(empty($_POST["student-name"]) || empty($_POST["student-classroom"]) || empty($_POST["student-course"])) {
-	header("Location: ../html/login.html");
+function is_post_empty(string $post_param): bool {
+	return empty($post_param);
 }
 
 $name	= $_POST["student-name"];
 $class	= $_POST["student-classroom"];
 $course = $_POST["student-course"];
+
+if(is_post_empty($name) || is_post_empty($class) || is_post_empty($course)) {
+	header("Location: ../html/login.html");
+}
 
 if(is_student_registered($name, $class, $course) == 0) {
 	echo "Estundate não está registrado.";
