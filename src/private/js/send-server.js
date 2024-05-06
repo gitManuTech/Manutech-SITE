@@ -1,11 +1,12 @@
 function prepReq(dataToSend) {
-	const formData = new FormData();
+	let reqMsg = "";
 
 	for(let i = 0; i < dataToSend.length; i++) {
-		formData.append(dataToSend[i].getAttribute("name"), dataToSend[i].value);
+		// foo=a&bar=b
+		reqMsg += dataToSend[i].getAttribute("name")+'='+dataToSend[i].value+'&';
 	}
 
-	return formData;
+	return reqMsg;
 }
 
 export function sendReq(userData, fileToProcess, method = "GET") {
@@ -13,15 +14,14 @@ export function sendReq(userData, fileToProcess, method = "GET") {
 	const xhr = new XMLHttpRequest();
 
 	xhr.open(method, fileToProcess, true);
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
 	xhr.onload = () => {
-
 		if(!xhr.responseURL) {
 			console.log(xhr.responseText);
 		} else {
 			window.location.href = xhr.responseURL;
 		}
-
 	};
 
 	xhr.send(req);
