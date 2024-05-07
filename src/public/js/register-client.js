@@ -7,6 +7,7 @@ document.getElementById("student-form").addEventListener("submit", mkRegisterReq
 function mkRegisterReq(e) {
 	const rawStudentData	= getRawStudentData();
 	const studentData	= getStudentData(rawStudentData);
+
 	const requestData	= createReq(rawStudentData, studentData, ELEMENTS_TO_SEND.ALL);
 	const requestPath	= "../../private/php/register-server.php";
 
