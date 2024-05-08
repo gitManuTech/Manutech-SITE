@@ -5,16 +5,13 @@ session_start();
 require_once "db-queries.php";
 require_once "db-query-check.php";
 
-$incoming_json	= file_get_contents("php://input");
-$json_decoded	= json_decode($incoming_json, true);
+$name		= $_POST["student-name"];
+$classroom	= $_POST["student-classroom"];
+$course		= $_POST["student-course"];
 
 // TODO: Remove "query" and replace it with "prepare" statements
 
-$name		= $json_decoded["student-name"];
-$classroom	= $json_decoded["student-classroom"];
-$course		= $json_decoded["student-course"];
-
-if(is_student_registered($name, $class, $course) == 0) {
+if(is_student_registered($name, $classroom, $course) == 0) {
 	echo "Estundate não está registrado.";
 	exit(0);
 }
