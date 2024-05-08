@@ -16,9 +16,9 @@ $course		= $_SESSION["scourse"];
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<meta name="description" content="The student profile page" />
-		<link rel="stylesheet" type="text/css" href="../css/header.css">
-		<link rel="stylesheet" type="text/css" href="../css/general.css" />
-		<link rel="stylesheet" type="text/css" href="../css/profile.css" />
+		<link rel="stylesheet" type="text/css" href="../../public/css/header.css">
+		<link rel="stylesheet" type="text/css" href="../../public/css/general.css" />
+		<link rel="stylesheet" type="text/css" href="../../public/css/profile.css" />
 
 	</head>
 
