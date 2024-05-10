@@ -32,6 +32,10 @@ ul {
 	list-style: none;
 }
 
+.main {
+	border-top: 1px solid black;
+}
+
 .footer {
 	padding: 1em;
 	text-align: center;
