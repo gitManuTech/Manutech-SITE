@@ -12,9 +12,9 @@ session_start();
 		<meta charset="UTF-8">
 		<meta name="viewport" content="">
 		<meta name="description" content="Página para relatar problemas">
-		<link rel="stylesheet" type="text/css" href="../css/general.css">
-		<link rel="stylesheet" type="text/css" href="../css/header.css">
-		<link rel="stylesheet" type="text/css" href="../css/form-problem.css">
+		<link rel="stylesheet" type="text/css" href="../../public/css/general.css">
+		<link rel="stylesheet" type="text/css" href="../../public/css/header.css">
+		<link rel="stylesheet" type="text/css" href="../../public/css/form-problem.css">
 
 	</head>
 
@@ -81,13 +81,16 @@ session_start();
 							<label for="problem-description">Descreva o problema</label>
 
 							<!-- TODO: We might need to resize it later down -->
-							<textarea id="problem-description" class="complain-description" name="problem-descriptor" placeholder="Dê uma descrição detalhada ao problema" maxlength="255" required></textarea>
+							<textarea
+							id="problem-description" class="complain-description"
+							name="problem-descriptor" placeholder="Dê uma descrição detalhada ao problema"
+							maxlength="255" onkeydown="enableBtn()"></textarea>
 
 						</div>
 
 						<div id="submit-btn-container">
 
-							<button type="submit" id="submit-btn">Enviar reclamação</button>
+							<button type="submit" id="submit-btn" disabled>Enviar reclamação</button>
 
 						</div>
 
@@ -105,7 +108,25 @@ session_start();
 
 		</footer>
 
-	<script type="text/js" src="../js/problem-found-client.js"></script>
+		<script type="text/js" src="../js/problem-found-client.js"></script>
+
+		<script>
+
+			function enableBtn() {
+				const problemArea	= document.getElementById("problem-description");
+				const studentProblemLen	= problemArea.value.length;
+				const minLength		= parseInt(problemArea.maxLength * (15 / 100));
+				const submitBtn		= document.getElementById("submit-btn");
+
+				if(studentProblemLen >= minLength) {
+					submitBtn.disabled = false;
+				} else {
+					submitBtn.disabled = true;
+				}
+			}
+
+		</script>
+
 	</body>
 
 </html>
