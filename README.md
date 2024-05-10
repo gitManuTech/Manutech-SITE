@@ -9,7 +9,7 @@ This project's repository is for a purpose similar as a "fail-safe", in case thi
 
 ## Members of this project
 
-- Higor Luiz Bicudo
+- Higor Luiz Bicudo, 2003780
 - Noah Vêri de Morais Franco Aleluia, 2014803
 - Joaquim Pedro Augusto de Castro Leite Oliveira, 2014803.
 - José Rodolfo Faustio Guimares Junior, 1994088
@@ -17,7 +17,8 @@ This project's repository is for a purpose similar as a "fail-safe", in case thi
 
 ## Objectives of this project
 
-(add this later on)
+Our objective is quite simple: make a site for Unimar, group members' current university, so that students
+may report about abnormal behavior around the campus: behavior which is not legal for study facilities.
 
 ## Tools used in this project
 
