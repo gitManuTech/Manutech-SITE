@@ -21,9 +21,12 @@ if(is_student_acc_disabled($name) === true) {
 	exit(0);
 }
 
-$_SESSION["sname"]	= $name;
-$_SESSION["sroom"]	= $class;
-$_SESSION["scourse"]	= $course;
+$student = get_credentials($name, $classroom, $course)->fetch_row();
+
+$_SESSION["uid"]	= $student[0];
+$_SESSION["sname"]	= $student[1];
+$_SESSION["sroom"]	= $student[2];
+$_SESSION["scourse"]	= $student[3];
 
 header("Location: ./profile.php");
 
