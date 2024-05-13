@@ -1,6 +1,6 @@
 document.getElementById("problem-title").addEventListener("keydown", verifyTitleLength);
 document.getElementById("problem-description").addEventListener("keydown", verifyPostLen);
-document.getElementById("problem-block").addEventListener("keydown", verifyBlockTyped));
+document.getElementById("problem-block").addEventListener("keydown", verifyBlockTyped);
 
 (function() {
 	document.getElementById("problem-title").focus();;
@@ -41,7 +41,7 @@ function verifyBlockTyped() {
 }
 
 function verifyTitleLength() {
-	const titleArea		= documenet.getElementById("problem-title");
+	const titleArea		= document.getElementById("problem-title");
 	const titleLength	= titleArea.value.length;
 
 	const titleMaxLen = 32;
