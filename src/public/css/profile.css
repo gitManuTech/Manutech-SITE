@@ -23,6 +23,10 @@
 .important-info { padding: 0.25rem; }
 
 /* TODO: maybe move this .header config this to "general.css" */
-.header {
+.main {
 	border-bottom: 1px solid black;
+}
+
+.post-header:hover {
+	color: blue;
 }
