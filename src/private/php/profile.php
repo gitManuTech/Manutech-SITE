@@ -75,7 +75,7 @@ $uid		= $_SESSION["uid"];
 
 			<div id="container-btn-problem">
 
-				<p id="look-like-btn"><a href="problem.php">Achou um problema? Avise aqui!</a></p>
+				<p class="look-like-btn"><a href="problem.php">Achou um problema? Avise aqui!</a></p>
 
 			</div>
 
