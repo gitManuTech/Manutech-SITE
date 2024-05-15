@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,12 +10,39 @@
 		<meta name="description" content="Home page for other posts">
 
 		<link rel="stylesheet" type="text/css" href="../../public/css/general.css">
+		<link rel="stylesheet" type="text/css" href="../../public/css/header.css">
 
 	</head>
 
 	<body>
 
-		<header class="header"></header>
+		<header class="header">
+
+			<div id="site-logo">
+
+				<img src="#" alt="Handyman logo">
+
+			</div>
+
+			<div id="site-name">
+
+				<h1>Handyman</h1>
+
+			</div>
+
+			<nav>
+
+				<ol class="navbar">
+
+					<li><a href="profile.php"><?php echo $_SESSION["sname"]; ?></a></li>
+					<li><a href="account-config.php">Configurações</a></li>
+					<li><a href="../../public/html/">Página Inicial</a></li>
+
+				</ol>
+
+			</nav>
+
+		</header>
 
 		<main class="main"></main>
 
