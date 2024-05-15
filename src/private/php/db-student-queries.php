@@ -3,7 +3,6 @@
 require_once "db-connect.php";
 
 function gen_student_page_post(string $title, string $desc, string $block): void {
-
 echo "
 <div class='post-header-container'>
 
@@ -25,7 +24,7 @@ function select_posts(int $uid): mysqli_result {
 	$mysql = connect_db();
 	$posts = "SELECT
 		problem_title Title, problem_desc DSC, problem_block Block
-		FROM problem_tbl WHERE problem_tbl.student_id =".intval($uid);
+		FROM problem_tbl WHERE problem_tbl.student_id =".intval($uid)." LIMIT 5";
 
 	$result = $mysql->query($posts);
 
