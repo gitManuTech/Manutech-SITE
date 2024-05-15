@@ -8,9 +8,9 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Home page for other posts">
-
 		<link rel="stylesheet" type="text/css" href="../../public/css/general.css">
 		<link rel="stylesheet" type="text/css" href="../../public/css/header.css">
+		<link rel="stylesheet" type="text/css" href="../../public/css/home.css">
 
 	</head>
 
@@ -44,7 +44,25 @@
 
 		</header>
 
-		<main class="main"></main>
+		<main class="main">
+
+			<section id="posts">
+
+				<header id="posts-header">
+
+					<h3>Posts feitos pelos Alunos</h3>
+
+				</header>
+
+				<div id="posts-all">
+
+					<?php // TODO: make function to show inside here ?>
+
+				</div>
+
+			</section>
+
+		</main>
 
 		<footer class="footer">
 
