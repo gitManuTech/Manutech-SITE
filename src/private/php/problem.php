@@ -47,7 +47,7 @@
 
 			<form id="form-problem-found" method="POST" action="problem-found-server.php" autocomplete="off">
 
-				<div class="form-aggregate ">
+				<div class="form-aggregate">
 
 					<div class="form-part problem-title">
 
