@@ -1,14 +1,10 @@
-<?php
-
-session_start();
-
-?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
 	<head>
 
-		<title>Handyman - Problem Found</title>
+		<title>Handyman - Fazer reclamação</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="">
 		<meta name="description" content="Página para relatar problemas">

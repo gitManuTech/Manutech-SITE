@@ -11,17 +11,17 @@ $uid		= $_SESSION["uid"];
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 	<head>
 
 		<title>Handyman - Perfil</title>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<meta name="description" content="The student profile page" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="description" content="The student profile page">
 		<link rel="stylesheet" type="text/css" href="../../public/css/header.css">
-		<link rel="stylesheet" type="text/css" href="../../public/css/general.css" />
-		<link rel="stylesheet" type="text/css" href="../../public/css/profile.css" />
+		<link rel="stylesheet" type="text/css" href="../../public/css/general.css">
+		<link rel="stylesheet" type="text/css" href="../../public/css/profile.css">
 
 	</head>
 
@@ -73,18 +73,17 @@ $uid		= $_SESSION["uid"];
 
 			<div id="user-problems"><?php display_posts($uid); ?></div>
 
-			<section id="container-btn-problem">
+			<div id="container-btn-problem">
 
-				<!--TODO: use Javascript later down-->
-				<button id="btn-problem"><a href="problem.php">Achou um problema? Avise aqui!</a></button>
+				<p id="look-like-btn"><a href="problem.php">Achou um problema? Avise aqui!</a></p>
 
-			</section>
+			</div>
 
-			<section id="see-posts">
+			<div id="see-posts">
 
 				<p><a href="home.php">Ver reclamações de outros alunos</a></p>
 
-			</section>
+			</div>
 
 		</main>
 

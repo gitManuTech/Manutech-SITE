@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
 
 	<head>
 
@@ -26,4 +26,4 @@
 
 	</body>
 
-<html>
+</html>

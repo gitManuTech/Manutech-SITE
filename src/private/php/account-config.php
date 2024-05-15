@@ -4,19 +4,19 @@
 
 	<head>
 
-		<title>Configurações da Conta</title>
+		<title>Handyman - Configurações da Conta</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Configuração da conta do aluno">
 		<link rel="stylesheet" type="text/css" href="../css/general.css">
 		<link rel="stylesheet" type="text/css" href="../css/header.css">
 
-	<style>
 
-		.delete-acc { color: red; }
+		<style>
 
+			.delete-acc { color: red; }
 
-	</style>
+		</style>
 
 	</head>
 
@@ -34,7 +34,7 @@
 
 				<div class="form-part">
 
-				<label for="del-acc-btn" class="del-acc">Deletar <?php echo $_SESSION["sname"] ?>:</label>
+					<label for="del-acc-btn" class="del-acc">Deletar <?php echo $_SESSION["sname"] ?>:</label>
 					<button type="submit" id="del-acc-btn" name="del-acc-btn">Deletar</button>
 
 				</div>
@@ -49,7 +49,8 @@
 
 		</footer>
 
-	<script type="text/js" src="../js/account-config.js"></script>
+		<script type="text/js" src="../js/account-config.js"></script>
+
 	</body>
 
 </html>
