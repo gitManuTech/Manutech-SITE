@@ -21,7 +21,6 @@
 2. Migrate to OOP some of the code
 4. Make function to check if certain POST request are empty or not at "register-server.php" "login-server.php"
 5. Change normal statements to prepare statements
-6. Make function to show all of the complain that the student has made
 
 ## Server - DB
 
