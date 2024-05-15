@@ -2,11 +2,7 @@
 
 session_start();
 
-$titulo = <<<END
-
-{$_GET["ptitle"]} no {$_GET["pblock"]}
-
-END;
+$titulo = $_GET["ptitle"]." no ".$_GET["pblock"];
 
 ?>
 <!DOCTYPE html>
@@ -14,8 +10,8 @@ END;
 
 	<head>
 
-		<title>Problema achado: <?php echo $_GET["ptitle"]; ?></title>
-		<meta charset="UTF=8">
+		<title>Reclamação: <?php echo $_GET["ptitle"]; ?></title>
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Student post">
 		<link rel="stylesheet" type="text/css" href="../../public/css/general.css">
@@ -34,7 +30,7 @@ END;
 			</div>
 
 
-			<div id="container-site">
+			<div id="container-logo">
 
 				<h1>Handyman</h1>
 
@@ -49,27 +45,37 @@ END;
 
 					<li><a href="../../public/html/index.html">Home</a></li>
 
+				</ol>
+
 			</nav>
 
 		</header>
 
 		<main class="main">
 
-			<section id="post-header">
+			<div id="student-post-container">
 
-				<h2><?php echo $titulo ?></h2>
+				<header class="post-header">
 
-			</section>
+					<h2><?php echo $titulo ?></h2>
 
-			<section class="post-text" id="post-context">
+				</header>
 
-				<p><?php echo $_GET["pdesc"]; ?></p>
+				<div class="post-text" id="post-context">
 
-			</section>
+					<p><?php echo $_GET["pdesc"]; ?></p>
+
+				</div>
+
+			</div>
 
 		</main>
 
-		<footer class="footer"></footer>
+		<footer class="footer">
+
+			<p>Handyman group INC. &copy;2024</p>
+
+		</footer>
 
 	</body>
 </html>
