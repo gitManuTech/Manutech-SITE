@@ -8,15 +8,9 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Configuração da conta do aluno">
-		<link rel="stylesheet" type="text/css" href="../css/general.css">
-		<link rel="stylesheet" type="text/css" href="../css/header.css">
-
-
-		<style>
-
-			.delete-acc { color: red; }
-
-		</style>
+		<link rel="stylesheet" type="text/css" href="../../public/css/general.css">
+		<link rel="stylesheet" type="text/css" href="../../public/css/header.css">
+		<link rel="stylesheet" type="text/css" href="../../public/css/acc-config.css">
 
 	</head>
 
