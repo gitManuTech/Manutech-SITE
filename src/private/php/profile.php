@@ -1,10 +1,13 @@
 <?php 
 
+require_once "db-student-queries.php";
+
 session_start();
 
 $name		= $_SESSION["sname"];
 $classroom	= $_SESSION["sroom"];
 $course		= $_SESSION["scourse"];
+$uid		= $_SESSION["uid"];
 
 ?>
 <!DOCTYPE html>
@@ -68,8 +71,7 @@ $course		= $_SESSION["scourse"];
 
 		<main class="main">
 
-<?php // TODO: create function to select all of the problems that the user has made ?>
-			<div id="user-problems"></div>
+			<div id="user-problems"><?php display_posts($uid); ?></div>
 
 			<section id="container-btn-problem">
 
