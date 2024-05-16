@@ -8,10 +8,13 @@ echo <<<END
 <div class="post-header-container">
 
 	<h2 class="post-header">
-		<a href="student-post.php?
-			ptitle={$title}
-			&pblock={$block}
-			&pdesc={$desc}"> {$title} <span class="author">({$author})<span></a>
+		<a href="student-post.php?ptitle={$title}&pblock={$block}&pdesc={$desc}">
+
+			<span class="title">{$title}</span>
+			<span class="author">({$author})<span>
+
+		</a>
+
 	</h2>
 
 </div>
@@ -32,12 +35,13 @@ echo <<<END
 <div class="post-header-container">
 
 	<h2 class="post-header">
-		<a href="student-post.php?
-			ptitle={$title}
-			&pblock={$block}
-			&pdesc={$desc}">
-				{$title}
-			</a>
+
+		<a href="student-post.php?ptitle={$title}&pblock={$block}&pdesc={$desc}">
+
+			{$title}
+
+		</a>
+
 	</h2>
 
 </div>
