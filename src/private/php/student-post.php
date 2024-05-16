@@ -41,9 +41,11 @@ $titulo = $_GET["ptitle"]." no ".$_GET["pblock"];
 
 				<ol class="navbar">
 
+					<li><a href="../../public/html/index.html">Home</a></li>
+
 					<li><a href="profile.php"><?php echo $_SESSION["sname"]; ?></a></li>
 
-					<li><a href="../../public/html/index.html">Home</a></li>
+					<li><a href="home.php">Home</a></li>
 
 				</ol>
 
