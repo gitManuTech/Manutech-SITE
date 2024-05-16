@@ -1,4 +1,10 @@
-<?php session_start(); ?>
+<?php
+
+require_once "db-student-queries.php";
+
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,7 +62,7 @@
 
 				<div id="posts-all">
 
-					<?php // TODO: make function to show inside here ?>
+					<?php display_all_posts(); ?>
 
 				</div>
 
