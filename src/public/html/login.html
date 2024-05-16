@@ -50,14 +50,14 @@
 				<div class="form-part">
 
 					<label for="student-name">Nome</label>
-					<input type="text" name="student-name" id="student-name" placeholder="O seu nome" required>
+					<input type="text" name="student-name" id="student-name" placeholder="O seu nome" required autofocus>
 
 				</div>
 
 				<div class="form-part">
 
 					<label for="student-classroom">Sala</label>
-					<input type="text" name="student-classroom" id="student-classroom" placeholder="1A" pattern="\d{1,1}\w{1,1}" required autofocus>
+					<input type="text" name="student-classroom" id="student-classroom" placeholder="1A" pattern="\d{1,1}\w{1,1}" onkeydown="verifyStudentRoom()" required>
 
 				</div>
 
@@ -89,6 +89,14 @@
 			<p>Handyman group INC. &copy;2024</p>
 
 		</footer>
+
+		<script>
+
+			function verifyStudentRoom() {
+				console.log("Hello!");
+			}
+
+		</script>
 
 	</body>
 </html>
