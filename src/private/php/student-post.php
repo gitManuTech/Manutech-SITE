@@ -45,8 +45,6 @@ $titulo = $_GET["ptitle"]." no ".$_GET["pblock"];
 
 					<li><a href="profile.php"><?php echo $_SESSION["sname"]; ?></a></li>
 
-					<li><a href="home.php">Home</a></li>
-
 				</ol>
 
 			</nav>

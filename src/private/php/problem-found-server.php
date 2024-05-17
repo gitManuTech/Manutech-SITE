@@ -1,9 +1,8 @@
 <?php
 
-require_once "db-student-queries.php";
+require_once "Database/db-student-queries.php";
 
 session_start();
-
 
 $problem_title 	= $_POST["problem-title"];
 $problem_block 	= $_POST["problem-block"];
