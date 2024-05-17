@@ -2,8 +2,8 @@
 
 session_start();
 
-require_once "db-queries.php";
-require_once "db-query-check.php";
+require_once "Database/db-queries.php";
+require_once "Database/db-query-check.php";
 
 $name		= $_POST["student-name"];
 $classroom	= $_POST["student-classroom"];
