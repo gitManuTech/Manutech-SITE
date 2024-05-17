@@ -1,9 +1,6 @@
 <?php
 
 require_once "db-connect.php";
-require_once "db-data-format.php";
-
-// TODO: use namespaces
 
 function select_all_student_posts(): mysqli_result {
 	$mysql = connect_db();
@@ -20,7 +17,6 @@ function select_all_student_posts(): mysqli_result {
 	return $data;
 }
 
-
 function select_posts(int $uid): mysqli_result {
 	$mysql = connect_db();
 	$posts = "SELECT problem_title Title, problem_desc DSC, problem_block Block
@@ -33,23 +29,6 @@ function select_posts(int $uid): mysqli_result {
 	$mysql = NULL;
 
 	return $result;
-}
-
-// TODO: combine this with display_posts() function
-function display_all_posts(): void {
-	$posts = select_all_student_posts();
-
-	while($post_data = $posts->fetch_assoc()) {
-		generate_post_home($post_data["Title"], $post_data["DSC"], $post_data["Block"], $post_data["Author"]);
-	}
-}
-
-function display_posts(int $uid): void {
-	$posts = select_posts($uid);
-
-	while($post_data = $posts->fetch_assoc()) {
-		generate_post_profile($post_data["Title"], $post_data["DSC"], $post_data["Block"]);
-	}
 }
 
 function send_problem_data(string $ptitle, string $pblock, string $pdesc, int $uid): void {
