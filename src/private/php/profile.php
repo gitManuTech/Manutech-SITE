@@ -1,6 +1,6 @@
 <?php 
 
-require_once "db-student-queries.php";
+require_once "display.php";
 
 session_start();
 
