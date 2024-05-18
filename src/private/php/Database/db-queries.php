@@ -1,9 +1,6 @@
 <?php
 
 require_once "db-connect.php";
-require_once "db-query-check.php";
-
-// TODO: Remove "query" and replace it with "prepare" statements
 
 /**
  * This function get student information from DB
@@ -23,15 +20,21 @@ require_once "db-query-check.php";
  * */
 function get_credentials(string $sname, string $sclass, string $scourse)
 : mysqli_result | bool {
-	$mysql	= connect_db();
-	$select	= "SELECT
+	$mysql		= connect_db();
+
+	$select_info	= "SELECT
 		student_id, student_name, student_classroom, student_course
 		FROM student_tbl WHERE
-		student_name = \"".$sname."\"
-		AND student_classroom = \"".$sclass."\"
-		AND student_course = \"".$scourse."\"";
+		student_name = ? AND student_classroom = ? AND student_course = ?";
 
-	$query	= $mysql->query($select);
+	$stmt		= $mysql->prepare($select_info);
+
+	$stmt->bind_param("sss", $sname, $sclass, $scourse);
+	$stmt->execute();
+
+	$query = $stmt->get_result();
+
+	$stmt->close();
 
 	return $query;
 }
@@ -51,13 +54,15 @@ function get_credentials(string $sname, string $sclass, string $scourse)
  * @param string $scourse The student course
  * */
 function insert_into_db(string $sname, string $sroom, string $scourse): void {
-	$mysql = connect_db();
-	$insert = "INSERT INTO student_tbl(student_name, student_classroom, student_course)
-		VALUES(\"".$sname."\", \"".$sroom."\", \"".$scourse."\")";
+	$mysql	= connect_db();
+	$insert = "INSERT INTO
+		student_tbl(student_name, student_classroom, student_course) VALUES(?, ?, ?)";
 
-	$query = $mysql->query($insert);
+	$stmt	= $mysql->prepare($insert);
 
-	$mysql->close();
+	$stmt->bind_param("sss", $sname, $sroom, $scourse);
+	$stmt->execute();
+	$stmt->close();
 }
 
 /**

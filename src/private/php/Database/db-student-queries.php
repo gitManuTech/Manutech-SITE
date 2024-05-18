@@ -18,30 +18,33 @@ function select_all_student_posts(): mysqli_result {
 }
 
 function select_posts(int $uid): mysqli_result {
-	$mysql = connect_db();
-	$posts = "SELECT problem_title Title, problem_desc DSC, problem_block Block
-		FROM problem_tbl WHERE problem_tbl.student_id =".intval($uid)." LIMIT 10";
+	$mysql		= connect_db();
+	$stu_posts	= "SELECT problem_title Title, problem_desc DSC, problem_block Block
+		FROM problem_tbl WHERE problem_tbl.student_id = ? LIMIT 10";
 
-	$result = $mysql->query($posts);
+	$stmt = $mysql->prepare($stu_posts);
 
-	$mysql->close();
+	$stmt->bind_param("i", $uid);
+	$stmt->execute();
 
-	$mysql = NULL;
+	$result = $stmt->get_result();
+
+	$stmt->close();
 
 	return $result;
 }
 
 function send_problem_data(string $ptitle, string $pblock, string $pdesc, int $uid): void {
 	$mysql		= connect_db();
-	$complain	= <<<END
-		INSERT INTO problem_tbl(
-			problem_title, problem_block, problem_desc, student_id
-		)
-		VALUES( "{$ptitle}", "{$pblock}", "{$pdesc}", "{$uid}" )
-	END;
+	$complain	= "INSERT INTO
+		problem_tbl(problem_title, problem_block, problem_desc, student_id)
+		VALUES(?, ?, ?, ?)";
 
-	$mysql->query($complain);
-	$mysql->close();
+	$stmt = $mysql->prepare($complain);
+
+	$stmt->bind_param("sssi", $ptitle, $pblock, $pdesc, $uid);
+	$stmt->execute();
+	$stmt->close();
 }
 
 ?>

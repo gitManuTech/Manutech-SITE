@@ -16,13 +16,9 @@ require_once "db-queries.php";
  * @return int
  * */
 function is_student_registered(string $sname, string $sclass, string $scourse): int {
-	$student_data = get_credentials($sname, $sclass, $scourse);
+	$student_data = get_credentials($sname, $sclass, $scourse)->num_rows;
 
-	if(!$student_data) {
-		return 0;
-	}
-
-	return $student_data->num_rows;
+	return $student_data;
 }
 
 /**
@@ -40,13 +36,20 @@ function is_student_registered(string $sname, string $sclass, string $scourse): 
  * */
 function is_student_acc_disabled(string $sname): bool {
 	$mysql		= connect_db();
-	$select_status	= "SELECT student_active FROM student_tbl
-				WHERE student_name = \"".$sname."\"";
+	$select_status	= "SELECT student_active
+		FROM student_tbl WHERE student_name = ?";
 
-	$query		= $mysql->query($select_status);
-	$acc_status	= $query->fetch_array(MYSQLI_NUM);
+	$stmt = $mysql->prepare($select_status);
 
-	return (intval($acc_status[0]) === 0);
+	$stmt->bind_param("s", $sname);
+	$stmt->execute();
+
+	$query	= $stmt->get_result();
+	$status = $query->fetch_array(MYSQLI_NUM);
+
+	$stmt->close();
+
+	return (intval($status[0]) === 0);
 }
 
 ?>
