@@ -20,7 +20,6 @@
 1. Add Tests
 2. Migrate to OOP some of the code
 4. Make function to check if certain POST request are empty or not at "register-server.php" "login-server.php"
-5. Change normal statements to prepare statements
 
 ## Server - DB
 
