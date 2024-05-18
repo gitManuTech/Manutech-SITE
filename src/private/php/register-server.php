@@ -3,6 +3,7 @@
 session_start();
 
 require_once "Database/db-queries.php";
+require_once "Database/db-query-check.php";
 // require_once "json.php";
 
 // $student_data = get_json();
@@ -12,7 +13,7 @@ $classroom	= $_POST["student-classroom"];
 $course		= $_POST["student-course"];
 
 if(is_student_registered($name, $classroom, $course) == 1) {
-	echo "Usuário já possui conta.";
+	echo "Estudante já possui conta.";
 	exit(1);
 }
 
