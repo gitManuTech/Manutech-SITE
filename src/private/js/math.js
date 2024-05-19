@@ -9,5 +9,3 @@
 export function calcMinFieldLen(maxLen, percentage) {
 	return parseInt(maxLen * (percentage / 100));
 }
-
-
