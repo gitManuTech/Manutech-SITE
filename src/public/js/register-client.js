@@ -13,7 +13,7 @@ function mkRegisterReq(e) {
 
 	// I don't know if this is the best way to do it
 	if(requestData === SUBMIT_ERROR.PROBLEM_FIELDS) {
-		event.preventDefault();
+		e.preventDefault();
 	} else {
 		mkReq(requestData, requestPath, true);
 	}
