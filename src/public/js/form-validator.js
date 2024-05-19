@@ -33,7 +33,7 @@ function isStudentCourseValid() {
 	const fieldLimit	= 38;
 	const studentCourse	= document.getElementById("student-course");
 
-	if(isFieldOverLimit(studentCourse.value.length, fieldLimit) {
+	if(isFieldOverLimit(studentCourse.value.length, fieldLimit)) {
 		console.log("over limit");
 	}
 }
