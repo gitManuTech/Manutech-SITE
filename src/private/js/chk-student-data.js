@@ -5,4 +5,6 @@ export function isFieldOverLimit(fieldLen, limit) {
 /*
  * make function to check
  * */
-export function checkPostValid() {}
+export function checkPostValid() {
+
+}
