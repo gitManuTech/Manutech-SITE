@@ -45,32 +45,39 @@
 
 		<main class="main">
 	
-			<form id="student-form" autocomplete="off" method="POST" action="../../private/php/login-server.php">
+			<form id="student-form" autocomplete="off" method="POST"
+			action="../../private/php/login-server.php">
 
 				<div class="form-part">
 
 					<label for="student-name">Nome</label>
-					<input type="text" name="student-name" id="student-name" placeholder="O seu nome" required autofocus>
+
+					<input type="text" name="student-name" id="student-name"
+					placeholder="O seu nome" required>
 
 				</div>
 
 				<div class="form-part">
 
 					<label for="student-classroom">Sala</label>
-					<input type="text" name="student-classroom" id="student-classroom" placeholder="1A" pattern="\d{1,1}\w{1,1}" onkeydown="verifyStudentRoom()" required>
+
+					<input type="text" name="student-classroom" id="student-classroom"
+					placeholder="1A" required>
 
 				</div>
 
 				<div class="form-part">
 
 					<label for="student-course">Curso</label>
-					<input type="text" name="student-course" id="student-course" placeholder="Nome do curso" required>
+
+					<input type="text" name="student-course" id="student-course"
+					placeholder="Nome do curso" required>
 
 				</div>
 
 				<div class="submit-btn-area">
 
-					<button type="submit" id="submit-btn">Logar</button>
+					<button type="submit" id="submit-btn" disabled>Logar</button>
 
 				</div>
 			
@@ -78,7 +85,11 @@
 
 			<div class="forgot-register">
 
-				<p>Esqueceu de criar a sua conta? <a href="./register.html" class="point-to-other-page">Clique aqui para criar!</a></p>
+				<p>Esqueceu de criar a sua conta?
+					<a href="register.html" class="point-to-other-page">
+						Clique aqui para criar!
+					</a>
+				</p>
 
 			</div>
 
@@ -91,12 +102,12 @@
 		</footer>
 
 		<script>
-
-			function verifyStudentRoom() {
-				console.log("Hello!");
-			}
-
+			(function() {
+				document.getElementById("student-name").focus();
+			})()
 		</script>
+
+		<script type="module" src="../js/form-validation.js"></script>
 
 	</body>
 </html>
