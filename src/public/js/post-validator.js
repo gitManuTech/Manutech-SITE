@@ -1,3 +1,6 @@
+import { enableOrDisableBtn } from "../../private/js/chk-student-data.js";
+import { calcMinFieldLen } from "../../private/math.js";
+
 document.getElementById("problem-title").addEventListener("keydown", verifyTitleLength);
 document.getElementById("problem-description").addEventListener("keydown", verifyPostLen);
 document.getElementById("problem-block").addEventListener("keydown", verifyBlockTyped);
@@ -6,26 +9,10 @@ document.getElementById("problem-block").addEventListener("keydown", verifyBlock
 	document.getElementById("problem-title").focus();;
 })
 
-function calcMinFieldLen(maxLen, percentage) {
-	return parseInt(maxLen * (percentage / 100));
-}
-
 function isBlockValid(blockTyped) {
-	// will search for "b" or "B" followed by any 1 digit number
-	const re = /[bB]{1,1}\d{1,1}/gi
+	const re = /B{1,1}\d{1,1}/gi
 
 	return ((blockTyped.match(re)) ? true : false);
-}
-
-function enableOrDisableBtn(fieldLen, minLen, maxLen) {
-	const submitBtn = document.getElementById("submit-btn");
-
-	// TODO: make it better
-	if(fieldLen >= minLen && fieldLen <= maxLen) {
-		submitBtn.disabled = false;
-	} else {
-		submitBtn.disabled = true;
-	}
 }
 
 function verifyBlockTyped() {
