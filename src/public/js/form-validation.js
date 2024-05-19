@@ -1,8 +1,6 @@
-import { isFieldOverLimit } from "../../private/js/chk-student-data.js";
-
-document.getElementById("student-name").addEventListener("keyup", isStudentNameValid);
+/*document.getElementById("student-name").addEventListener("keyup", isStudentNameValid);
 document.getElementById("student-classroom").addEventListener("keyup", isStudentRoomValid);
-document.getElementById("student-course").addEventListener("keyup", isStudentCourseValid);
+document.getElementById("student-course").addEventListener("keyup", isStudentCourseValid);*/
 
 function checkRoomFormat(studentRoom) {
 	const regex = /\d{1,1}[A-Z]{1,1}/;
