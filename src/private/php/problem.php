@@ -45,7 +45,8 @@
 
 		<main>
 
-			<form id="form-problem-found" method="POST" action="problem-found-server.php" autocomplete="off">
+			<form id="form-problem-found" method="POST"
+				action="problem-found-server.php" autocomplete="off">
 
 				<div class="form-aggregate">
 
@@ -54,7 +55,8 @@
 						<label for="problem-title">Titulo do problema</label>
 						<input type="text"
 						id="problem-title" class="complain-title"
-						name="problem-title" placeholder="Titulo do problema" required>
+						name="problem-title" placeholder="Titulo do problema" required
+						data-problem="title">
 
 					</div>
 
@@ -64,7 +66,8 @@
 						<label for="problem-block">Identifique o bloco</label>
 						<input type="text"
 						id="problem-block" class="complain-location"
-						name="problem-block" placeholder="B1" required>
+						name="problem-block" placeholder="B1" required
+						data-problem="block">
 
 					</div>
 
@@ -81,13 +84,15 @@
 							<textarea
 							id="problem-description" class="complain-description"
 							name="problem-descriptor"
-							placeholder="Dê uma descrição detalhada ao problema"></textarea>
+							placeholder="Dê uma descrição detalhada ao problema"
+							data-problem="desc">
+							</textarea>
 
 						</div>
 
 						<div id="submit-btn-container">
 
-							<button type="submit" id="submit-btn" disabled>Enviar reclamação</button>
+							<button type="submit" id="submit-btn">Enviar reclamação</button>
 
 						</div>
 
@@ -105,8 +110,12 @@
 
 		</footer>
 
-		<script type="text/js" src="../../public/js/problem-found-client.js"></script>
-		<script type="text/javascript" src="../../public/js/post-validator.js"></script>
+		<script>
+			(function() {
+				document.getElementById("problem-title").focus();;
+			})
+		</script>
+		<script type="module" src="../../public/js/problem-found-client.js"></script>
 
 	</body>
 
