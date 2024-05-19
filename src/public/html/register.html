@@ -51,7 +51,7 @@
 
 					<label for="student-name">Nome</label>
 					<input type="text" name="student-name" id="student-name" 
-					placeholder="O seu nome" required autofocus>
+					placeholder="O seu nome" required>
 
 				</div>
 
@@ -59,7 +59,7 @@
 
 					<label for="student-classroom">Sala</label>
 					<input type="text" name="student-classroom" id="student-classroom"
-					placeholder="1A" pattern="\d{1,1}\w{1,1}" required>
+					placeholder="1A" required>
 
 				</div>
 
@@ -72,7 +72,7 @@
 
 				<div class="submit-btn-area">
 
-					<button type="submit" id="submit-btn">Cadastrar</button>
+					<button type="submit" id="submit-btn" disabled>Cadastrar</button>
 
 				</div>
 			
@@ -85,7 +85,19 @@
 			<p>Handyman group INC. &copy;2024</p>
 	
 		</footer>
-	
+
+		<script>
+
+			(function() {
+
+				document.getElementById("student-name").focus();
+
+			})()
+
+		</script>
+
+		<script type="module" src="../js/form-validator.js"></script>
+
 	</body>
 
 </html>
