@@ -1,6 +1,6 @@
 # Hello! / Olá!
 
-Hello there, my name is João Paulo Ferrari Sant' Ana and this is a group project!
+Hello there, this is ManuTech and this is a group project!
 
 # Introduction
 
