@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 	<head>
 
-		<title>Handyman - Login</title>
+		<title>Manutech - Login</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Página de login">
@@ -21,13 +21,13 @@
 
 			<div class="img-container">
 
-				<img src="#" alt="Handyman logo">
+				<img src="#" alt="Manutech logo">
 
 			</div>
 
 			<div class="title-container">
 
-				<h2>Logar na conta</h2>
+				<h2>Acessar conta</h2>
 
 			</div>
 		
@@ -45,33 +45,26 @@
 
 		<main class="main">
 	
-			<form id="student-form" autocomplete="off" method="POST"
-			   action="../../private/php/login-server.php">
+			<form id="student-form" autocomplete="off" method="POST" action="../../private/php/login-server.php">
 
 				<div class="form-part">
 
 					<label for="student-name">Nome</label>
-
-					<input type="text" name="student-name" id="student-name"
-					placeholder="O seu nome" required>
+					<input type="text" name="student-name" id="student-name" placeholder="O seu nome" required autofocus>
 
 				</div>
 
 				<div class="form-part">
 
 					<label for="student-classroom">Sala</label>
-
-					<input type="text" name="student-classroom" id="student-classroom"
-					placeholder="1A" required>
+					<input type="text" name="student-classroom" id="student-classroom" placeholder="1A" pattern="\d{1,1}\w{1,1}" onkeydown="verifyStudentRoom()" required>
 
 				</div>
 
 				<div class="form-part">
 
 					<label for="student-course">Curso</label>
-
-					<input type="text" name="student-course" id="student-course"
-					placeholder="Nome do curso" required>
+					<input type="text" name="student-course" id="student-course" placeholder="Nome do curso" required>
 
 				</div>
 
@@ -85,11 +78,7 @@
 
 			<div class="forgot-register">
 
-				<p>Esqueceu de criar a sua conta?
-					<a href="register.html" class="point-to-other-page">
-						Clique aqui para criar!
-					</a>
-				</p>
+				<p>Esqueceu de criar a sua conta? <a href="./register.html" class="point-to-other-page">Clique aqui para criar!</a></p>
 
 			</div>
 
@@ -97,18 +86,17 @@
 
 		<footer class="footer">
 
-			<p>Handyman group INC. &copy;2024</p>
+			<p>Manutech group INC. &copy;2024</p>
 
 		</footer>
 
 		<script>
-			(function() {
-				document.getElementById("student-name").focus();
-			})()
+
+			function verifyStudentRoom() {
+				console.log("Hello!");
+			}
+
 		</script>
-
-
-		<script type="module" src="../js/login-client.js"></script>
 
 	</body>
 </html>
