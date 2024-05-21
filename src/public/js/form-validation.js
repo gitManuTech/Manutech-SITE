@@ -1,37 +1,42 @@
-/*document.getElementById("student-name").addEventListener("keyup", isStudentNameValid);
-document.getElementById("student-classroom").addEventListener("keyup", isStudentRoomValid);
-document.getElementById("student-course").addEventListener("keyup", isStudentCourseValid);*/
+function isFieldOverLimit(fieldLength, limit) {
+	return (fieldLength > limit);
+}
 
-function checkRoomFormat(studentRoom) {
+function checkClassFormat(classroom) {
+	// will match, for example: "1Q", "7Z", "2B", "9S"
 	const regex = /\d{1,1}[A-Z]{1,1}/;
 
-	return regex.test(studentClass);
+	return regex.test(classroom);
 }
 
-function isStudentRoomValid() {
-	const fieldLimit	= 2;
-	const studentClassroom	= document.getElementById("student-classroom");
+function checkBlockFormat(studentBlock) {
+	const regex = /\d{1,1}B{1,1}/;
 
-	// TODO: refactor
-	if(isFieldOverLimit(studentClassroom.value, fieldLimit) && checkRoomFormat(studentClassroom.value)) {
-		console.log("classroom is valid");
-	}
+	return regex.test(studentBlock);
 }
 
-function isStudentNameValid() {
-	const fieldLimit	= 32;
-	const studentName	= document.getElementById("student-name");
+export function isClassroomValid(classroom) {
+	const fieldLimit = 2;
 
-	if(isFieldOverLimit(studentName.value.length, fieldLimit)) {
-		console.log("over Limit!");
-	}
+	return (!isFieldOverLimit(classroom.length, fieldLimit)
+		&& checkClassFormat(classroom));
 }
 
-function isStudentCourseValid() {
-	const fieldLimit	= 38;
-	const studentCourse	= document.getElementById("student-course");
+export function isBlockValid(block) {
+	const fieldLimit = 2;
 
-	if(isFieldOverLimit(studentCourse.value.length, fieldLimit)) {
-		console.log("over limit");
-	}
+	return (isFieldOverLimit(block.length, fieldLimit)
+		&& checkBlockFormat(block));
+}
+
+export function isNameValid(name) {
+	const fieldLimit = 32;
+
+	return (isFieldOverLimit(name.length, fieldLimit));
+}
+
+export function isCourseValid(course) {
+	const fieldLimit = 38;
+
+	return (isFieldOverLimit(course.length, fieldLimit));
 }
