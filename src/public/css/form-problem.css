@@ -1,0 +1,78 @@
+/* we have two divs with a padding of 5px each, */
+/* we need to discount the amount of pixels from the padding */
+/* but, the padding is on px and we need % (i want half each, so 50%) */
+/* so, we must take the from the ".form-part" and convert it to % and */
+/* subtract the form's width (100) and divide by 2, since we have two divs in ".form-aggregate" */
+
+:root {
+	--complain-form-part-padding: 5px;
+	--form-part-percentage: calc(calc(var(--complain-form-part-padding) / 16) * 100);
+	--space-needed: calc(100 - var(--form-part-percentage));
+	--aggregate-space: calc(var(--space-needed) / 2);
+}
+
+form {
+	width: 100%;
+	height: 80vh;
+}
+
+textarea {
+	margin-bottom: 0.5rem;
+}
+
+#form-problem-found {
+	display: flex;
+	flex-direction: column;
+}
+
+#problem-description {
+	resize: none;
+}
+
+.form-part {
+	padding: var(--complain-form-part-padding);
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	text-align: center;
+}
+
+.form-part input {
+	margin-bottom: 0.5rem;
+}
+
+.form-part label {
+	font-size: 1.2em;
+}
+
+.form-part button {
+	border: none;
+	border-radius: 0.5rem;
+	padding: 0.75em;
+	box-shadow: 1px 1px;
+}
+
+/* TODO: I need to make the first ".form-part" have half the form width*/
+/* I need to make the second one ".form-part" have the another half the form width*/
+.form-aggregate {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+/* TODO: Study more about calc, for now, i'll have to put the values by hand */
+.problem-title {
+	width: 34.375%;
+}
+
+.problem-area {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.complain-description {
+	width: 54rem;
+	height: 6rem;
+}
