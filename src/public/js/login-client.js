@@ -27,8 +27,12 @@ function mkLoginCheck(e) {
 	const rawStudentData	= getRawStudentData();
 	const studentData	= getStudentData(rawStudentData);
 
+	const name	= studentData[0];
+	const room	= studentData[1];
+	const course	= studentData[2];
+
 	// TODO: refactor
-	if(checkStudentData(studentData[0], studentData[1], studentData[2]) === SUBMIT_ERROR.PROBLEM_FORMAT) {
+	if(checkStudentData(name, room, course) === SUBMIT_ERROR.PROBLEM_FORMAT) {
 		e.preventDefault();
 	}
 }
