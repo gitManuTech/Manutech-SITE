@@ -8,5 +8,6 @@ export const ELEMENTS_TO_SEND = {
 /* Maybe separe this into a "enums-err-handling.js" file */
 export const SUBMIT_ERROR = {
 	PROBLEM_FIELDS: 0,
-	PROBLEM_JSON: 1
+	PROBLEM_FORMAT: 1,
+	PROBLEM_JSON: 2
 }
