@@ -24,3 +24,7 @@
 ## Server - DB
 
 1. There might be a need to resize certain fields in the database
+
+## Site - Hosting
+
+1. Put site on on https://vercel.com/

@@ -29,4 +29,4 @@ may report about abnormal behavior around the campus: behavior which is not lega
 - PHPUnit
 - MySQL
 - Markup Validation Service (https://validator.w3.org/)
-- put site on on https://vercel.com/
+- Figma (https://www.figma.com/)
