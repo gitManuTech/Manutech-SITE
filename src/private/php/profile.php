@@ -71,17 +71,29 @@ $uid		= $_SESSION["uid"];
 
 		<main class="main">
 
-			<div id="user-problems"><?php display_posts($uid); ?></div>
+			<div id="post-container">
+
+				<?php display_posts($uid); ?>
+
+			</div>
 
 			<div id="container-btn-problem">
 
-				<p class="look-like-btn"><a href="problem.php">Achou um problema? Avise aqui!</a></p>
+				<p class="look-like-btn">
+
+					<a href="problem.php" class="no-link">Achou um problema? Avise aqui!</a>
+
+				</p>
 
 			</div>
 
 			<div id="see-posts">
 
-				<p><a href="home.php">Ver reclamações de outros alunos</a></p>
+				<p class="look-like-btn">
+
+					<a href="home.php" class="no-link">Ver reclamações de outros alunos</a>
+
+				</p>
 
 			</div>
 
