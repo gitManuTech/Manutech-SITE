@@ -1,0 +1,36 @@
+.div-header {
+	padding-left: var(--section-header-padding);
+}
+
+body{
+	background-color: #1F2122;
+}
+
+header{
+	color: #fff;
+	text-align: center;
+}
+
+div{
+	color: #fff;
+	text-align: right;
+}
+
+h1{
+	font-style: italic;
+}
+
+footer{
+	color: #fff;
+}
+
+.point-to-other-page {
+	color: #0F76B0;
+}
+
+p{
+	text-align: center;
+	font-size: 25px;
+}
+
+
