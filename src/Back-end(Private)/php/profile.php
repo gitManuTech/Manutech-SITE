@@ -19,9 +19,9 @@ $uid		= $_SESSION["uid"];
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta name="description" content="The student profile page">
-		<link rel="stylesheet" type="text/css" href="../../public/css/header.css">
-		<link rel="stylesheet" type="text/css" href="../../public/css/general.css">
-		<link rel="stylesheet" type="text/css" href="../../public/css/profile.css">
+		<link rel="stylesheet" type="text/css" href="../../Front-end(Public)/css/header.css">
+		<link rel="stylesheet" type="text/css" href="../../Front-end(Public)/css/general.css">
+		<link rel="stylesheet" type="text/css" href="../../Front-end(Public)/css/profile.css">
 
 	</head>
 
