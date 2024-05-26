@@ -18,18 +18,18 @@ require_once "db-connect.php";
  *
  * @return mysqli_result|bool
  * */
-function get_credentials(string $sname, string $sclass, string $scourse)
+function get_credentials(string $sname, string $sra, string $scourse)
 : mysqli_result | bool {
 	$mysql		= connect_db();
 
 	$select_info	= "SELECT
-		student_id, student_name, student_classroom, student_course
+		student_id, student_name, student_ra, student_course
 		FROM student_tbl WHERE
-		student_name = ? AND student_classroom = ? AND student_course = ?";
+		student_name = ? AND student_ra = ? AND student_course = ?";
 
 	$stmt		= $mysql->prepare($select_info);
 
-	$stmt->bind_param("sss", $sname, $sclass, $scourse);
+	$stmt->bind_param("sss", $sname, $sra, $scourse);
 	$stmt->execute();
 
 	$query = $stmt->get_result();
@@ -53,14 +53,14 @@ function get_credentials(string $sname, string $sclass, string $scourse)
  * @param string $sclass The student classroom
  * @param string $scourse The student course
  * */
-function insert_into_db(string $sname, string $sroom, string $scourse): void {
+function insert_into_db(string $sname, string $sra, string $scourse): void {
 	$mysql	= connect_db();
 	$insert = "INSERT INTO
-		student_tbl(student_name, student_classroom, student_course) VALUES(?, ?, ?)";
+		student_tbl(student_name, student_ra, student_course) VALUES(?, ?, ?)";
 
 	$stmt	= $mysql->prepare($insert);
 
-	$stmt->bind_param("sss", $sname, $sroom, $scourse);
+	$stmt->bind_param("sss", $sname, $sra, $scourse);
 	$stmt->execute();
 	$stmt->close();
 }
