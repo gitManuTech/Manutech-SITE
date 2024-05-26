@@ -8,18 +8,18 @@ require_once "Database/db-query-check.php";
 
 // $student_data = get_json();
 
-$name		= $_POST["student-name"];
-$classroom	= $_POST["student-classroom"];
-$course		= $_POST["student-course"];
+$name	= $_POST["student-name"];
+$ra	= $_POST["student-ra"];
+$course = $_POST["student-course"];
 
-if(is_student_registered($name, $classroom, $course) == 1) {
+if(is_student_registered($name, $ra, $course) == 1) {
 	echo "Estudante já possui conta.";
 	exit(1);
 }
 
-insert_into_db($name, $classroom, $course);
+insert_into_db($name, $ra, $course);
 
-$student = get_credentials($name, $classroom, $course)->fetch_row();
+$student = get_credentials($name, $ra, $course)->fetch_row();
 
 $_SESSION["uid"]	= $student[0];
 $_SESSION["sname"]	= $student[1];
