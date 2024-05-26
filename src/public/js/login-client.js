@@ -31,7 +31,6 @@ function mkLoginCheck(e) {
 	const room	= studentData[1];
 	const course	= studentData[2];
 
-	// TODO: refactor
 	if(checkStudentData(name, room, course) === SUBMIT_ERROR.PROBLEM_FORMAT) {
 		e.preventDefault();
 	}
