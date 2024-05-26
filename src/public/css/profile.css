@@ -13,20 +13,24 @@
 }
 
 .name-classroom {
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 }
 
-.important-info { padding: 0.25rem; }
+.post {
+	margin-bottom: var(--post-distance);
+}
 
-/* TODO: maybe move this .header config this to "general.css" */
-.main {
-	border-bottom: 1px solid black;
+.post-header a {
+	text-decoration: none;
+	color: #4949EF;
 }
 
 .post-header:hover {
 	color: blue;
+}
+
+.no-link-style {
+	text-decoration: none;
 }
