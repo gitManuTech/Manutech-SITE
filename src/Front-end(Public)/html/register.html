@@ -45,20 +45,21 @@
 
 		<main class="main">
 
-			<form id="student-form" autocomplete="off" method="POST" action="../../private/php/register-server.php">
+			<form id="student-form" autocomplete="off" method="POST"
+				action="../../Back-end(Private)/php/register-server.php">
 
 				<div class="form-part">
 
 					<label for="student-name">Nome do aluno</label>
 					<input type="text" name="student-name" id="student-name" 
-					placeholder="O seu nome" required autofocus>
+					placeholder="O seu nome" required>
 
 				</div>
 
 				<div class="form-part">
 
-					<label for="student-classroom">RA</label>
-					<input type="text" name="student-classroom" id="student-classroom"
+					<label for="student-ra">RA</label>
+					<input type="text" name="student-ra" id="student-ra"
 					placeholder="Informe seu RA" pattern="\d{7,7}" required>
 
 				</div>
@@ -66,7 +67,8 @@
 				<div class="form-part">
 
 					<label for="student-course">Curso</label>
-					<input type="text" name="student-course" id="student-course" placeholder="Nome do curso" required>
+					<input type="text" name="student-course" id="student-course"
+					placeholder="Nome do curso" required>
 
 				</div>
 
@@ -85,6 +87,16 @@
 			<p>Manutech group INC. &copy;2024</p>
 	
 		</footer>
+
+		<script>
+
+			(function() {
+
+				document.getElementById("student-name").focus();
+
+			})()
+
+		</script>
 	
 	</body>
 
