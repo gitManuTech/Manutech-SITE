@@ -2,17 +2,17 @@
 	--list-padding: 0.75rem;
 	--list-margin: 1em;
 	--form-part-padding: 0.5rem;
-}
-
-/* TODO: find better font, if there is */
-* {
-	font-family: "Times  New Roman", Arial;
+	--post-distance: 0.25em;
 }
 
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial;
 }
 
 p,
@@ -48,4 +48,8 @@ ul {
 .point-to-other-page {
 	color: black;
 	text-decoration: underline;
+}
+
+.no-link {
+	text-decoration: none;
 }
