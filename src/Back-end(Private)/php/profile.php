@@ -4,10 +4,10 @@ require_once "display.php";
 
 session_start();
 
-$name		= $_SESSION["sname"];
-$classroom	= $_SESSION["sroom"];
-$course		= $_SESSION["scourse"];
-$uid		= $_SESSION["uid"];
+$name	= $_SESSION["sname"];
+$ra	= $_SESSION["sra"];
+$course = $_SESSION["scourse"];
+$uid	= $_SESSION["uid"];
 
 ?>
 <!DOCTYPE html>
@@ -41,7 +41,7 @@ $uid		= $_SESSION["uid"];
 
 					<div id="student-room" class="important-info">
 
-						<p class="student-info"><?php echo $classroom; ?></p>
+						<p class="student-info"><?php echo $ra; ?></p>
 
 					</div>
 
@@ -108,13 +108,6 @@ $uid		= $_SESSION["uid"];
 
 
 		<script type="text/javascript">
-
-			// READTHIS: https://stackoverflow.com/questions/14100563/how-to-redirect-on-another-page-and-pass-parameter-in-url-from-table
-			function relatar() {
-
-				window.location.href = "./problem.php";
-
-			}
 
 
 		</script>
