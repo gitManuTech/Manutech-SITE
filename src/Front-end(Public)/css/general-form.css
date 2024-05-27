@@ -3,6 +3,11 @@
 	--default-form-items-color: #1c1c1c1c;
 	/*Change this later on*/
 	--hover-btn-color: #FFFFFFFF;
+	--txt-color: #FFF;
+}
+
+body {
+    background-color: #1F2122;
 }
 
 #student-form {
