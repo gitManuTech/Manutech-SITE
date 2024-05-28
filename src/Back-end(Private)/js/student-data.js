@@ -26,3 +26,11 @@ export function getStudentData(rawData) {
 
 	return studentData;
 }
+
+export function storeLocally(rawData, studentData) {
+	for(let i = 0; i < studentData.length; i++) {
+		localStorage.setItem(rawData[i].getAttribute("name"), studentData[i]);
+	}
+}
+
+
