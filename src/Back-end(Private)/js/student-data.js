@@ -1,11 +1,22 @@
+/** * @typedef {HTMLElement[]} PageElements **/
+
+/**
+ * @function getRawStudentData
+ * @returns {PageElements} Will return raw HTML form elements
+ **/
 export function getRawStudentData() {
 	const studentName	= document.getElementById("student-name");
-	const studentClass	= document.getElementById("student-classroom");
+	const studentClass	= document.getElementById("student-ra");
 	const studentCourse	= document.getElementById("student-course");
 
 	return [ studentName, studentClass, studentCourse ];
 }
 
+/**
+ * @function getRawStudentData
+ * @param	{PageElements} rawData	-	Raw form fields
+ * @returns	{string[]}			Will return raw HTML form elements
+ **/
 export function getStudentData(rawData) {
 	const studentData = [];
 
