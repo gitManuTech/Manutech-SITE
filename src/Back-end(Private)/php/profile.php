@@ -4,9 +4,6 @@ require_once "display.php";
 
 session_start();
 
-$name	= $_SESSION["sname"];
-$ra	= $_SESSION["sra"];
-$course = $_SESSION["scourse"];
 $uid	= $_SESSION["uid"];
 
 ?>
@@ -25,7 +22,7 @@ $uid	= $_SESSION["uid"];
 
 	</head>
 
-	<body>
+	<body onload="loadStudentInfo()">
 
 		<header id="main-header" class="header">
 
@@ -33,23 +30,23 @@ $uid	= $_SESSION["uid"];
 
 				<div class="name-classroom">
 
-					<div id="student-name" class="important-info">
+					<div id="student-name-container">
 
-						<p class="student-info"><?php echo $name; ?></p>
+						<p class="student-info"></p>
 
 					</div>
 
-					<div id="student-room" class="important-info">
+					<div id="student-ra-container">
 
-						<p class="student-info"><?php echo $ra; ?></p>
+						<p class="student-info"></p>
 
 					</div>
 
 				</div>
 
-				<div id="student-course" class="important-info">
+				<div id="student-course-container">
 
-					<p class="student-info"><?php echo $course; ?></p>
+					<p class="student-info"></p>
 
 				</div>
 
@@ -109,6 +106,13 @@ $uid	= $_SESSION["uid"];
 
 		<script type="text/javascript">
 
+			function loadStudentInfo() {
+				const infoPlaces = document.getElementsByClassName("student-info");
+
+				infoPlaces[0].innerText = localStorage["student-name"];
+				infoPlaces[1].innerText = localStorage["student-ra"];
+				infoPlaces[2].innerText = localStorage["student-course"];
+			}
 
 		</script>
 
