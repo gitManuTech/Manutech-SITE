@@ -3,21 +3,12 @@
 }
 
 body{
-	margin:50px
-	background-color= #2c7498;
+	background-color: #1F2122;
 }
 
 header{
 	color: #fff;
 	text-align: center;
-}
-/*Width and height-largura e altura(lembrete p\ noah*/ 
-
-#manutech-logo{
-	height: 55px;
-	width: 69px;
-	border-radius: 50%;
-	border: 5% solid /*escolher a cor da borda*/;
 }
 
 div{
@@ -25,14 +16,16 @@ div{
 	text-align: right;
 }
 
+h1{
+	font-style: italic;
+}
+
 footer{
 	color: #fff;
 }
 
-h1{
-	text-align: right;
-	font-style: initial;
-	font-size: 30px;
+.point-to-other-page {
+	color: #0F76B0;
 }
 
 p{
@@ -40,24 +33,4 @@ p{
 	font-size: 25px;
 }
 
-a{
-	color:blue
-}
 
-.members-container{
-	text-align: center;
-}
-
-#introduction {
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	
-	}
-   
-
-.point-to-other-page{
-	color: #0F76B0;
-}
