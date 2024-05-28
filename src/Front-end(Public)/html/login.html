@@ -12,7 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/general-form.css">
 		<link rel="stylesheet" type="text/css" href="../css/form.css">
 		<link rel="stylesheet" type="text/css" href="../css/login.css">
-
+		<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 	</head>
 
 	<body>
@@ -51,17 +51,22 @@
 
 				<div class="form-part">
 
-					<label for="student-name" class="txt-color">Nome</label>
-					<input type="text" name="student-name" id="student-name"
-					placeholder="O seu nome" required>
+					
+					<label for="student-name">Nome</label>
+					<i class='bx bx-user'></i><input type="text" id="student-name" placeholder="O seu nome" required autofocus>
+					
+
 
 				</div>
 
 				<div class="form-part">
 
-					<label for="student-ra" class="txt-color">RA</label>
-					<input type="text" name="student-ra" id="student-ra"
-					placeholder="1234567" pattern="\d{7,7}" required>
+
+					<label for="student-classroom">Sala</label>
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAQtJREFUSEvtltENgkAMhj8mMHEB3UQ30VddQl1CX3UT3UQXMHECpQZMPQ7ohVMgegmBkLbftf2vuYSWVtISlzLwOvKGCvHKwPfI4AKnc2BJ+AhMgFP6PQ2sQK1vlbhqnSs2U+sbCp4DY+CcvvcZ2PcvOtgX0PrvrUChGVsh0TO2aqwf4AEwA4ZKNCPnOIWK66JEeAUOwE3i6x4vgK2nlvoch/bYDbcEdi5Y5unqw+BNGv85t3XGFnCouFz7foJlbruzW3ovT75yLUTN2NeSVwkz0h+cl7yRuL5Waj19ZOciLLkg6CVDRotLJpxMvUbisp5di11QqS0BrTZesNU5il3nLvRRsqoK8nsZPwACrXYfoQ7ZqgAAAABJRU5ErkJggg=="
+					class='img-sala' height="20" width="20" id="class">
+					 <input type="text" name="student-classroom" id="student-classroom" placeholder="1A" pattern="\d{1,1}\w{1,1}" onkeydown="verifyStudentRoom()" required>
+
 
 				</div>
 
@@ -75,7 +80,10 @@
 
 				<div class="submit-btn-area">
 
-					<button type="submit" class="txt-color" id="submit-btn">Logar</button>
+
+					<button type="submit" id="submit-btn">Login</button>
+					
+
 
 				</div>
 			
@@ -83,13 +91,8 @@
 
 			<div class="forgot-register">
 
-				<p class="txt-color">Esqueceu de criar a sua conta?
+				<p>Ainda não tem uma conta? <a href="./register.html" class="point-to-other-page" <font color="blue">Clique aqui para criar!</a></p>
 
-					<a href="./register.html" class="point-to-other-page">
-						Clique aqui para criar!
-					</a>
-
-				</p>
 
 			</div>
 
