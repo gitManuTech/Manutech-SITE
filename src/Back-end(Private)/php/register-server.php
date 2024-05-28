@@ -23,7 +23,7 @@ $student = get_credentials($name, $ra, $course)->fetch_row();
 
 $_SESSION["uid"]	= $student[0];
 $_SESSION["sname"]	= $student[1];
-$_SESSION["sroom"]	= $student[2];
+$_SESSION["sra"]	= $student[2];
 $_SESSION["scourse"]	= $student[3];
 
 header("Location: ./profile.php");
