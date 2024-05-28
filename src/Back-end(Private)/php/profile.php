@@ -4,7 +4,7 @@ require_once "display.php";
 
 session_start();
 
-$uid	= $_SESSION["uid"];
+$uid = $_SESSION["uid"];
 
 ?>
 <!DOCTYPE html>
@@ -103,18 +103,7 @@ $uid	= $_SESSION["uid"];
 
 		</footer>
 
-
-		<script type="text/javascript">
-
-			function loadStudentInfo() {
-				const infoPlaces = document.getElementsByClassName("student-info");
-
-				infoPlaces[0].innerText = localStorage["student-name"];
-				infoPlaces[1].innerText = localStorage["student-ra"];
-				infoPlaces[2].innerText = localStorage["student-course"];
-			}
-
-		</script>
+		<script type="text/javascript" src="../../Front-end(Public)/js/load-student-data.js"></script>
 
 	</body>
 
