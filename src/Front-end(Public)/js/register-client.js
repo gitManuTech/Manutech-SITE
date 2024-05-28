@@ -1,5 +1,5 @@
-import { getRawStudentData, getStudentData storeLocally }
-	from "../../Back-end(Private)/js/student-data.js"
+import { getRawStudentData, getStudentData, storeLocally }
+	from "../../Back-end(Private)/js/student-data.js";
 
 document.getElementById("student-form").addEventListener("submit", mkRegisterReq, true);
 
