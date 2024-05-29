@@ -1,8 +1,8 @@
 import { getRawStudentData, getStudentData, storeLocally }
-	from "../../Back-end(Private)/js/student-data.js"
+	from "../../Private/js/student-data.js"
 import { isNameValid, isClassroomValid, isCourseValid }
 	from "./form-validation.js";
-import { SUBMIT_ERROR } from "../../Back-end(Private)/js/enums.js"
+import { SUBMIT_ERROR, SUBMIT_OK } from "../../Private/js/enums.js"
 
 document.getElementById("student-form").addEventListener("submit", mkLoginCheck, true);
 
@@ -11,9 +11,11 @@ function isRaValid(ra) {
 }
 
 function checkStudentData(name, ra, course) {
+	let data_status = SUBMIT_OK.FIELDS_OK;
+
 	if(isNameValid(name)) {
 		window.alert("Nome digitado acima do limite");
-		return SUBMIT_ERROR.PROBLEM_FORMAT;
+		data_status = SUBMIT_ERROR.PROBLEM_FIELDS;
 	}
 
 	/*if(!isClassroomValid(classroom)) {
@@ -23,15 +25,15 @@ function checkStudentData(name, ra, course) {
 
 	if(isRaValid(ra)) {
 		window.alert("RA digitado incorreto");
-		return SUBMIT_ERROR.PROBLEM_FORMAT;
+		data_status = SUBMIT_ERROR.PROBLEM_FIELDS;
 	}
 
 	if(isCourseValid(course)) {
 		window.alert("Curso digitado acima do limite");
-		return SUBMIT_ERROR.PROBLEM_FORMAT;
+		data_status = SUBMIT_ERROR.PROBLEM_FIELDS;
 	}
 
-	return true;
+	return data_status;
 }
 
 function mkLoginCheck(e) {
