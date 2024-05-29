@@ -15,9 +15,9 @@ session_start();
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Home page for other posts">
-		<link rel="stylesheet" type="text/css" href="../../Front-end(Public)/css/general.css">
-		<link rel="stylesheet" type="text/css" href="../../Front-end(Public)/css/header.css">
-		<link rel="stylesheet" type="text/css" href="../../Front-end(Public)/css/home.css">
+		<link rel="stylesheet" type="text/css" href="../../Public/css/general.css">
+		<link rel="stylesheet" type="text/css" href="../../Public/css/header.css">
+		<link rel="stylesheet" type="text/css" href="../../Public/css/home.css">
 
 	</head>
 
@@ -43,7 +43,7 @@ session_start();
 
 					<li><a href="profile.php"><?php echo $_SESSION["sname"]; ?></a></li>
 					<li><a href="account-config.php">Configurações</a></li>
-					<li><a href="../../Front-end(Public)/html/">Página Inicial</a></li>
+					<li><a href="../../Public/html/">Página Inicial</a></li>
 
 				</ol>
 

@@ -8,9 +8,9 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Configuração da conta do aluno">
-		<link rel="stylesheet" type="text/css" href="../../public/css/general.css">
-		<link rel="stylesheet" type="text/css" href="../../public/css/header.css">
-		<link rel="stylesheet" type="text/css" href="../../public/css/acc-config.css">
+		<link rel="stylesheet" type="text/css" href="../../Public/css/general.css">
+		<link rel="stylesheet" type="text/css" href="../../Public/css/header.css">
+		<link rel="stylesheet" type="text/css" href="../../Public/css/acc-config.css">
 
 	</head>
 
@@ -28,7 +28,7 @@
 
 				<div class="form-part">
 
-					<label for="del-acc-btn" class="del-acc">Deletar <?php echo $_SESSION["sname"] ?>:</label>
+					<label for="del-acc-btn" class="del-acc">Deletar Conta (<?php echo $_SESSION["sname"] ?>):</label>
 					<button type="submit" id="del-acc-btn" name="del-acc-btn">Deletar</button>
 
 				</div>
