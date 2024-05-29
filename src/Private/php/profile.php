@@ -8,11 +8,11 @@ $uid = $_SESSION["uid"];
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 	<head>
 
-		<title>Handyman - Perfil</title>
+		<title>ManuTech - Perfil</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta name="description" content="The student profile page">
@@ -99,12 +99,12 @@ $uid = $_SESSION["uid"];
 
 		<footer class="footer">
 
-			<p>Handyman group INC. &copy;2024</p>
+			<p>ManuTech group INC. &copy;2024</p>
 
 		</footer>
 
-		<script type="text/javascript" src="../../Public/js/load-student-data.js"></script>
-		<script type="text/javascript" src="../../Public/js/unload-student-data.js"></script>
+		<script type="text/javascript" src="../js/load-student-data.js"></script>
+		<script type="text/javascript" src="../js/unload-student-data.js"></script>
 
 	</body>
 

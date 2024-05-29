@@ -1,26 +1,29 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 	<head>
 
-		<title>Handyman - Fazer reclamação</title>
+		<title>ManuTech - Fazer reclamação</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="">
 		<meta name="description" content="Página para relatar problemas">
-		<link rel="stylesheet" type="text/css" href="../../public/css/general.css">
-		<link rel="stylesheet" type="text/css" href="../../public/css/header.css">
-		<link rel="stylesheet" type="text/css" href="../../public/css/form-problem.css">
+		<link rel="stylesheet" type="text/css" href="../../Public/css/general.css">
+		<link rel="stylesheet" type="text/css" href="../../Public/css/header.css">
+		<link rel="stylesheet" type="text/css" href="../../Public/css/form-problem.css">
 
 	</head>
 
-	<body>
+	<body onload="loadStudentInfo()">
 
 		<header class="header">
 
 			<div class="header-img-container">
 
-				<img src="#" alt="Handyman logo" id="logo">
+				<img src="../../Public/img/MANUTECH LOGO.jpg" height="48" width="48"
+				alt="ManuTech logo" id="manutech-logo">
+
+
 
 			</div>
 
@@ -34,8 +37,8 @@
 
 				<ol class="navbar">
 
-					<li><a href="./profile.php"><?php echo $_SESSION["sname"]; ?></a></li>
-					<li><a href="../../public/html/index.html">Home</a></li>
+					<li><a href="./profile.php"><span class="student-info"></span></a></li>
+					<li><a href="../../Public/html/index.html">Home</a></li>
 
 				</ol>
 
@@ -106,7 +109,7 @@
 
 		<footer class="footer">
 
-			<p>Handyman Group INC. &copy;2024</p>
+			<p>ManuTech Group INC. &copy;2024</p>
 
 		</footer>
 
@@ -115,7 +118,9 @@
 				document.getElementById("problem-title").focus();;
 			})
 		</script>
-		<script type="module" src="../../public/js/problem-found-client.js"></script>
+
+		<script type="module" src="../../Public/js/problem-found-client.js"></script>
+		<script type="text/javascript" src="../js/load-student-data.js"></script>
 
 	</body>
 

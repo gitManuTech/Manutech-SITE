@@ -1,49 +1,46 @@
 <?php
 
-session_start();
-
-$titulo = $_GET["ptitle"]." no ".$_GET["pblock"];
+$formated_title = $_GET["ptitle"]." no ".$_GET["pblock"];
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 	<head>
 
 		<title>Reclamação: <?php echo $_GET["ptitle"]; ?></title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Student post">
-		<link rel="stylesheet" type="text/css" href="../../public/css/general.css">
-		<link rel="stylesheet" type="text/css" href="../../public/css/header.css">
+		<meta name="description" content="ManuTech Student post">
+		<link rel="stylesheet" type="text/css" href="../../Public/css/general.css">
+		<link rel="stylesheet" type="text/css" href="../../Public/css/header.css">
 
 	</head>
 
-	<body>
+	<body onload="loadStudentInfo()">
 
 		<header class="header">
 
 			<div id="container-site">
 
-				<img src="#" alt="Handyman logo">
+				<img src="../../Public/img/MANUTECH LOGO.jpg"
+				height="48" width="48"
+				alt="ManuTech logo" id="manutech-logo">
 
 			</div>
-
 
 			<div id="container-logo">
 
-				<h1>Handyman</h1>
+				<h1>ManuTech</h1>
 
 			</div>
-
 
 			<nav>
 
 				<ol class="navbar">
 
+					<li><a href="profile.php"><span class="student-info"></span></a></li>
 					<li><a href="../../public/html/index.html">Home</a></li>
-
-					<li><a href="profile.php"><?php echo $_SESSION["sname"]; ?></a></li>
 
 				</ol>
 
@@ -57,7 +54,7 @@ $titulo = $_GET["ptitle"]." no ".$_GET["pblock"];
 
 				<header class="post-header">
 
-					<h2><?php echo $titulo ?></h2>
+					<h2><?php echo $formated_title ?></h2>
 
 				</header>
 
@@ -73,9 +70,11 @@ $titulo = $_GET["ptitle"]." no ".$_GET["pblock"];
 
 		<footer class="footer">
 
-			<p>Handyman group INC. &copy;2024</p>
+			<p>ManuTech group INC. &copy;2024</p>
 
 		</footer>
+
+		<script type="text/javascript" src="../js/load-student-data.js"></script>
 
 	</body>
 </html>
