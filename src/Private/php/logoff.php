@@ -1,7 +1,5 @@
 <?php
 
-echo "Deslogando da conta...";
-
 session_start();
 session_abort();
 session_unset();
