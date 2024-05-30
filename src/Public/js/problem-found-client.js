@@ -1,10 +1,11 @@
 /**
  * @typedef {Array.string} string[]
  * */
-import { getComplains } from "../../private/js/get-complains.js";
+import { getComplains } from "../../Private/js/get-complains.js";
+
 import { isTitleOverLimit,
 	isBlockTypedValid,
-	isPostOverLimit } from "../../private/js/post-validator.js";
+	isPostOverLimit } from "../../Private/js/post-validator.js";
 
 document.getElementById("form-problem-found")
 	.addEventListener("submit", sendComplain, true);
