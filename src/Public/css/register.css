@@ -1,1 +1,9 @@
+#manutech-logo{
+    border-radius:50px;
+}
 
+body{
+    background:no-repeat url("background-register.jpg");
+	background-size: 100%;
+	margin: 0px;
+}

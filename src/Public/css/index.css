@@ -3,17 +3,32 @@
 }
 
 body{
-	background-color: #1F2122;
+	background:no-repeat url("background-home.jpg");
+	background-size: 100%;
+	margin: 0px;
 }
 
 header{
-	color: #fff;
+	color: black;
 	text-align: center;
 }
 
 div{
-	color: #fff;
-	text-align: right;
+	color: black;
+}
+
+#manutech-logo{
+	border-radius: 50px;
+}
+
+#introduction{
+	font-family: "Inder", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	  }
+	  
+h2{
+	background-color: darkblue;
 }
 
 h1{
@@ -21,7 +36,7 @@ h1{
 }
 
 footer{
-	color: #fff;
+	color: black;
 }
 
 .point-to-other-page {
@@ -33,4 +48,7 @@ p{
 	font-size: 25px;
 }
 
+main{
+	height: 80vh;
+}
 

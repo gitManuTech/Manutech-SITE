@@ -3,6 +3,16 @@
 	margin: 1em;
 }
 
+body{
+	background:no-repeat url("background-login.jpg");
+	background-size: 100%;
+	margin: 0px;
+}
+
 .point-to-other-page {
 	color: blue;
+}
+
+#manutech-logo{
+	border-radius: 50px;
 }
