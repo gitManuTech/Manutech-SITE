@@ -1,0 +1,11 @@
+export const SUBMIT_ERROR = {
+	PROBLEM_FIELDS: 0,
+	PROBLEM_FORMAT: 1,
+	PROBLEM_JSON: 2
+}
+
+export const SUBMIT_OK = {
+	FIELDS_OK: 100,
+	FORMAT_OK: 101,
+	JSON_OK: 103
+}

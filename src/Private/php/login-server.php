@@ -9,8 +9,6 @@ $name	= $_POST["student-name"];
 $ra	= $_POST["student-ra"];
 $course = $_POST["student-course"];
 
-// TODO: Remove "query" and replace it with "prepare" statements
-
 if(is_student_registered($name, $ra, $course) == 0) {
 	echo "Estundate não está registrado.";
 	exit(0);

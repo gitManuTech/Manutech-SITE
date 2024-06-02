@@ -12,7 +12,7 @@ This project's repository is for a purpose similar as a "fail-safe", in case thi
 - Higor Luiz Bicudo, 2003780
 - Noah Vêri de Morais Franco Aleluia, 2014803
 - Joaquim Pedro Augusto de Castro Leite Oliveira, 2014803.
-- José Rodolfo Faustio Guimares Junior, 1994088
+- José Rodolfo Faustino Guimares Junior, 1994088
 - João Paulo Ferrari Sant'Ana, 2007857
 
 ## Objectives of this project
