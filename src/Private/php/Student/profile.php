@@ -1,6 +1,6 @@
 <?php 
 
-require_once "display.php";
+require_once "../DisplayData/display.php";
 
 session_start();
 
@@ -15,10 +15,17 @@ $uid = $_SESSION["uid"];
 		<title>ManuTech - Perfil</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
+<<<<<<< HEAD:src/Private/php/profile.php
 		<meta name="description" content="The student profile page">
 		<link rel="stylesheet" type="text/css" href="../../Public/css/general.css">
-		<!-- <link rel="stylesheet" type="text/css" href="../../Public/css/general.css">
-		<link rel="stylesheet" type="text/css" href="../../Public/css/profile.css"> -->
+		<link rel="stylesheet" type="text/css" href="../../Public/css/general.css">
+		<link rel="stylesheet" type="text/css" href="../../Public/css/profile.css">
+=======
+		<meta name="description" content="O perfil do estudante">
+		<link rel="stylesheet" type="text/css" href="../../../Public/css/general.css">
+		<link rel="stylesheet" type="text/css" href="../../../Public/css/header.css">
+		<link rel="stylesheet" type="text/css" href="../../../Public/css/profile.css">
+>>>>>>> e413932c0d916be214fd5a3cc396730c4f637bf4:src/Private/php/Student/profile.php
 
 	</head>
 
@@ -56,7 +63,7 @@ $uid = $_SESSION["uid"];
 
 				<ol class="navbar">
 
-					<li><a href="logoff.php" onclick="endSession()">Deslogar</a></li>
+					<li><a href="../logoff.php" onclick="endSession()">Deslogar</a></li>
 
 					<li><a href="account-config.php">Configurar Conta</a></li>
 
@@ -78,7 +85,7 @@ $uid = $_SESSION["uid"];
 
 				<p class="look-like-btn">
 
-					<a href="problem.php" class="no-link">Achou um problema? Avise aqui!</a>
+					<a href="../Post/problem.php" class="no-link">Achou um problema? Avise aqui!</a>
 
 				</p>
 
@@ -88,7 +95,7 @@ $uid = $_SESSION["uid"];
 
 				<p class="look-like-btn">
 
-					<a href="home.php" class="no-link">Ver reclamações de outros alunos</a>
+					<a href="../Home/home.php" class="no-link">Ver reclamações de outros alunos</a>
 
 				</p>
 
@@ -103,8 +110,8 @@ $uid = $_SESSION["uid"];
 
 		</footer>
 
-		<script type="text/javascript" src="../js/load-student-data.js"></script>
-		<script type="text/javascript" src="../js/unload-student-data.js"></script>
+		<script type="text/javascript" src="../../js/load-student-data.js"></script>
+		<script type="text/javascript" src="../../js/unload-student-data.js"></script>
 
 	</body>
 

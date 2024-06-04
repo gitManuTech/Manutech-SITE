@@ -1,10 +1,6 @@
 <?php
-
-require_once "Database/db-student-queries.php";
-require_once "display.php";
-
-session_start();
-
+require_once "../Database/db-student-queries.php";
+require_once "../DisplayData/display.php";
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -15,9 +11,9 @@ session_start();
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Home page for other posts">
-		<link rel="stylesheet" type="text/css" href="../../Public/css/general.css">
-		<link rel="stylesheet" type="text/css" href="../../Public/css/header.css">
-		<link rel="stylesheet" type="text/css" href="../../Public/css/home.css">
+		<link rel="stylesheet" type="text/css" href="../../../Public/css/general.css">
+		<link rel="stylesheet" type="text/css" href="../../../Public/css/header.css">
+		<link rel="stylesheet" type="text/css" href="../../../Public/css/home.css">
 
 	</head>
 
@@ -27,7 +23,7 @@ session_start();
 
 			<div id="site-logo">
 
-				<img src="../../Public/img/MANUTECH LOGO.jpg" 
+				<img src="../../../Public/img/MANUTECH LOGO.jpg" 
 				height="48" width="48" alt="ManuTech logo" id="manutech-logo">
 
 			</div>
@@ -44,7 +40,7 @@ session_start();
 
 					<li>
 
-						<a href="profile.php">
+						<a href="../Student/profile.php">
 
 							<span class="student-info"></span>
 
@@ -52,7 +48,7 @@ session_start();
 
 					</li>
 
-					<li><a href="account-config.php">Configurações</a></li>
+					<li><a href="../Student/account-config.php">Configurações</a></li>
 					<li><a href="../../Public/html/">Página Inicial</a></li>
 
 				</ol>
@@ -87,7 +83,7 @@ session_start();
 
 		</footer>
 
-		<script type="text/javascript" src="../js/load-student-data.js"></script>
+		<script type="text/javascript" src="../../js/load-student-data.js"></script>
 
 	</body>
 

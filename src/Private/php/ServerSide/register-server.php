@@ -2,22 +2,22 @@
 
 session_start();
 
-require_once "Database/db-queries.php";
-require_once "Database/db-query-check.php";
+require_once "../Database/db-queries.php";
+require_once "../Database/db-query-check.php";
+// require_once "json.php";
+
+// $student_data = get_json();
 
 $name	= $_POST["student-name"];
 $ra	= $_POST["student-ra"];
 $course = $_POST["student-course"];
 
-if(is_student_registered($name, $ra, $course) == 0) {
-	echo "Estundate não está registrado.";
-	exit(0);
+if(is_student_registered($name, $ra, $course) == 1) {
+	echo "Estudante já possui conta.";
+	exit(1);
 }
 
-if(is_student_acc_disabled($name) === true) {
-	echo "Conta do estudante foi desabilitada.";
-	exit(0);
-}
+insert_into_db($name, $ra, $course);
 
 $student = get_credentials($name, $ra, $course)->fetch_row();
 
@@ -26,6 +26,6 @@ $_SESSION["sname"]	= $student[1];
 $_SESSION["sra"]	= $student[2];
 $_SESSION["scourse"]	= $student[3];
 
-header("Location: ./profile.php");
+header("Location: ../profile.php");
 
 ?>
