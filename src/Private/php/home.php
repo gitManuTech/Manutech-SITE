@@ -1,10 +1,6 @@
 <?php
-
 require_once "Database/db-student-queries.php";
-require_once "display.php";
-
-session_start();
-
+require_once "DisplayData/display.php";
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
