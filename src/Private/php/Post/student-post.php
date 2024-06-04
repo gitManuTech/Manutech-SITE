@@ -1,8 +1,4 @@
-<?php
-
-$formated_title = $_GET["ptitle"]." no ".$_GET["pblock"];
-
-?>
+<?php $formated_title = $_GET["ptitle"]." no ".$_GET["pblock"]; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,8 +8,8 @@ $formated_title = $_GET["ptitle"]." no ".$_GET["pblock"];
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="ManuTech Student post">
-		<link rel="stylesheet" type="text/css" href="../../Public/css/general.css">
-		<link rel="stylesheet" type="text/css" href="../../Public/css/header.css">
+		<link rel="stylesheet" type="text/css" href="../../../Public/css/general.css">
+		<link rel="stylesheet" type="text/css" href="../../../Public/css/header.css">
 
 	</head>
 
@@ -23,7 +19,7 @@ $formated_title = $_GET["ptitle"]." no ".$_GET["pblock"];
 
 			<div id="container-site">
 
-				<img src="../../Public/img/MANUTECH LOGO.jpg"
+				<img src="../../../Public/img/MANUTECH LOGO.jpg"
 				height="48" width="48"
 				alt="ManuTech logo" id="manutech-logo">
 
@@ -39,8 +35,8 @@ $formated_title = $_GET["ptitle"]." no ".$_GET["pblock"];
 
 				<ol class="navbar">
 
-					<li><a href="profile.php"><span class="student-info"></span></a></li>
-					<li><a href="../../public/html/index.html">Home</a></li>
+					<li><a href="../Student/profile.php"><span class="student-info"></span></a></li>
+					<li><a href="../../../Public/html/index.html">Home</a></li>
 
 				</ol>
 
@@ -74,7 +70,7 @@ $formated_title = $_GET["ptitle"]." no ".$_GET["pblock"];
 
 		</footer>
 
-		<script type="text/javascript" src="../js/load-student-data.js"></script>
+		<script type="text/javascript" src="../../js/load-student-data.js"></script>
 
 	</body>
 </html>
