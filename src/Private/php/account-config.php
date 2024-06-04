@@ -36,6 +36,25 @@
 
 			</form>
 
+			<form id="ch-cour-form" name="ch-cour-form" action="ch-cour-server.php" method="POST">
+
+				<div class="form-part">
+
+					<label for="change-course">Alterar curso:</label>
+					<input type="text" id="change-course" name="change-course"
+					value="<?php echo $_SESSION["scourse"]; ?>"
+					>
+
+				</div>
+
+				<div class="form-part">
+
+					<button type="submit" id="ch-cour-btn">Registrar Alteração</button>
+
+				</div>
+
+			</form>
+
 		</main>
 
 		<footer class="footer">
