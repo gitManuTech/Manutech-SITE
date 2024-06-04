@@ -1,3 +1,19 @@
 .delete-acc {
 	color: red;
 }
+
+main{
+	height: 80vh;
+}
+
+body{
+	color: black;
+	background:no-repeat url("background-acc-config.jpg");
+	background-size: 100%;
+	margin: 0px;
+}
+
+::before,
+*::after {
+	color: black;
+}

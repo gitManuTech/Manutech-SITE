@@ -1,5 +1,11 @@
 body{
-	color:black;
+	background:no-repeat url("background-about-project.jpg");
+	background-size: 100%;
+	margin: 0px;
+}
+
+main{
+	height: 83vh;
 }
 
 .member-name {
@@ -12,4 +18,16 @@ body{
 
 #manutech-logo{
 	border-radius: 50px;
+}
+
+main{
+	color:white;
+}
+
+footer{
+	color:white;
+}
+
+#site-title{
+	color:white;
 }
