@@ -2,8 +2,8 @@
 
 session_start();
 
-require_once "Database/db-queries.php";
-require_once "Database/db-query-check.php";
+require_once "../Database/db-queries.php";
+require_once "../Database/db-query-check.php";
 
 $name	= $_POST["student-name"];
 $ra	= $_POST["student-ra"];
@@ -26,6 +26,6 @@ $_SESSION["sname"]	= $student[1];
 $_SESSION["sra"]	= $student[2];
 $_SESSION["scourse"]	= $student[3];
 
-header("Location: ./profile.php");
+header("Location: ../profile.php");
 
 ?>
