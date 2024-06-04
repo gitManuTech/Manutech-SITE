@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php
+// I need the $_SESSION["uid"], so i really need session_start() here
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -8,7 +11,6 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Configuração da conta do aluno">
-
 		<link rel="stylesheet" type="text/css" href="../../Public/css/general.css">
 		<link rel="stylesheet" type="text/css" href="../../Public/css/header.css">
 		<link rel="stylesheet" type="text/css" href="../../Public/css/acc-config.css">
