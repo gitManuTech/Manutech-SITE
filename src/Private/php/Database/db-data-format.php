@@ -28,12 +28,13 @@ echo "
 
 function generate_post_home(string $title, string $desc, string $block, string $author): void {
 echo "
-<div class=\"post-header-container\">
-".generate_post_header_home($title, $block, $desc, $author)."
-</div>
-
-<div class=\"post-desc\">
-	<p class=\"post-text\">{$desc}</p>
+<div class=\"post\">
+	<div class=\"post-header-container\">"
+		.generate_post_header_home($title, $block, $desc, $author).
+	"</div>
+	<div class=\"post-desc\">
+		<p class=\"post-text\">{$desc}</p>
+	</div>
 </div>";
 }
 
@@ -43,6 +44,7 @@ echo "
 	<div class=\"post-header-container\">"
 		.generate_post_header_profile($title, $block, $desc).
 	"</div>
+
 	<div class=\"post-desc\">
 		<p class=\"post-text\">{$desc}</p>
 	</div>
