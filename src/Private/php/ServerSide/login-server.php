@@ -26,6 +26,6 @@ $_SESSION["sname"]	= $student[1];
 $_SESSION["sra"]	= $student[2];
 $_SESSION["scourse"]	= $student[3];
 
-header("Location: ../profile.php");
+header("Location: ../Student/profile.php");
 
 ?>

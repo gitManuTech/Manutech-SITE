@@ -1,9 +1,8 @@
 <?php
 
-require_once "Database/db-data-format.php";
-require_once "Database/db-student-queries.php";
+require_once "../Database/db-data-format.php";
+require_once "../Database/db-student-queries.php";
 
-// TODO: combine this with display_posts() function
 function display_all_posts(): void {
 	$posts = select_all_student_posts();
 
