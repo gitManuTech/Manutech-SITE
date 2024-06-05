@@ -11,9 +11,9 @@ session_start();
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Configuração da conta do aluno">
-		<link rel="stylesheet" type="text/css" href="../../Public/css/general.css">
-		<link rel="stylesheet" type="text/css" href="../../Public/css/header.css">
-		<link rel="stylesheet" type="text/css" href="../../Public/css/acc-config.css">
+		<link rel="stylesheet" type="text/css" href="../../../Public/css/general.css">
+		<link rel="stylesheet" type="text/css" href="../../../Public/css/header.css">
+		<link rel="stylesheet" type="text/css" href="../../../Public/css/acc-config.css">
 
 	</head>
 
@@ -38,7 +38,7 @@ session_start();
 
 			</form>
 
-			<form id="ch-cour-form" name="ch-cour-form" action="../ServerSide/ch-cour-server.php" method="POST">
+			<form id="ch-cour-form" name="ch-cour-form" onsubmit="return updateStudentCourse()">
 
 				<div class="form-part">
 
@@ -68,12 +68,9 @@ session_start();
 
 		</footer>
 
-		<script type="text/js" src="../js/account-config.js"></script>
-		<script type="text/javascript" src="../js/load-student-data.js"></script>
-		<script>
-// TODO: put AJAX here
-// i can use AJAX here, at least
-		</script>
+		<script type="text/javascript" src="../../js/account-config.js"></script>
+		<script type="text/javascript" src="../../js/load-student-data.js"></script>
+
 	</body>
 
 </html>
