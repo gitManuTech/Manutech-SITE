@@ -8,9 +8,9 @@ require_once "../Database/db-query-check.php";
 
 // $student_data = get_json();
 
-$name	= $_POST["student-name"];
-$ra	= $_POST["student-ra"];
-$course = $_POST["student-course"];
+$name	= trim($_POST["student-name"]);
+$ra	= trim($_POST["student-ra"]);
+$course = trim($_POST["student-course"]);
 
 if(is_student_registered($name, $ra, $course) == 1) {
 	echo "Estudante já possui conta.";

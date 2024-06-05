@@ -5,9 +5,9 @@ session_start();
 require_once "../Database/db-queries.php";
 require_once "../Database/db-query-check.php";
 
-$name	= $_POST["student-name"];
-$ra	= $_POST["student-ra"];
-$course = $_POST["student-course"];
+$name	= trim($_POST["student-name"]);
+$ra	= trim($_POST["student-ra"]);
+$course = trim($_POST["student-course"]);
 
 if(is_student_registered($name, $ra, $course) == 0) {
 	echo "Estundate não está registrado.";
