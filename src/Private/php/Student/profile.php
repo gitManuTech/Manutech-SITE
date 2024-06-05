@@ -15,17 +15,10 @@ $uid = $_SESSION["uid"];
 		<title>ManuTech - Perfil</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
-<<<<<<< HEAD:src/Private/php/profile.php
-		<meta name="description" content="The student profile page">
-		<link rel="stylesheet" type="text/css" href="../../Public/css/general.css">
-		<link rel="stylesheet" type="text/css" href="../../Public/css/general.css">
-		<link rel="stylesheet" type="text/css" href="../../Public/css/profile.css">
-=======
 		<meta name="description" content="O perfil do estudante">
 		<link rel="stylesheet" type="text/css" href="../../../Public/css/general.css">
 		<link rel="stylesheet" type="text/css" href="../../../Public/css/header.css">
 		<link rel="stylesheet" type="text/css" href="../../../Public/css/profile.css">
->>>>>>> e413932c0d916be214fd5a3cc396730c4f637bf4:src/Private/php/Student/profile.php
 
 	</head>
 
