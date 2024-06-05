@@ -34,28 +34,27 @@ session_start();
 					<label for="del-acc-btn" class="del-acc">Deletar Conta:</label>
 					<button type="submit" id="del-acc-btn" name="del-acc-btn">Deletar</button>
 		
-					//criar um botão para alterar curso//
-					
-
-				
 				</div>
 
 			</form>
 
-			<form id="ch-cour-form" name="ch-cour-form" action="ch-cour-server.php" method="POST">
+			<form id="ch-cour-form" name="ch-cour-form" action="../ServerSide/ch-cour-server.php" method="POST">
 
 				<div class="form-part">
 
-					<label for="change-course">Alterar curso:</label>
-					<input type="text" id="change-course" name="change-course"
-					value="<?php echo $_SESSION["scourse"]; ?>"
-					>
+					<label for="current-course">Curso atual:</label>
+					<input type="text" id="current-course" name="current-course"
+					value="<?php echo $_SESSION["scourse"]; ?>" readonly>
+
+					<label for="new-course">Curso novo:</label>
+					<input type="text" id="new-course" name="new-course"
+					placeholder="Nome do curso novo">
 
 				</div>
 
 				<div class="form-part">
 
-					<button type="submit" id="ch-cour-btn">Registrar Alteração</button>
+					<button type="submit" id="ch-cour-btn">Registrar curso atual</button>
 
 				</div>
 
@@ -71,7 +70,10 @@ session_start();
 
 		<script type="text/js" src="../js/account-config.js"></script>
 		<script type="text/javascript" src="../js/load-student-data.js"></script>
-
+		<script>
+// TODO: put AJAX here
+// i can use AJAX here, at least
+		</script>
 	</body>
 
 </html>
