@@ -26,6 +26,10 @@
 
 			</div>
 
+			<div class="manutech">
+				<h3>ManuTech</h3>
+			</div>
+
 			<div class="title-container">
 
 				<h2 class="txt-color">Acessar conta</h2>
@@ -45,9 +49,14 @@
 		</header>
 
 		<main class="main">
-	
+
+<!--Link biblioteca de icons-->
+			<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+			
 			<form id="student-form" autocomplete="off" method="POST"
 				action="../../Private/php/ServerSide/login-server.php">
+				<i class="bx bxs-user"></i>
 
 				<div class="form-part">
 
@@ -56,15 +65,16 @@
 					placeholder="O seu nome">
 
 				</div>
-
+				<i class="bx bx-id-card"></i>	
 				<div class="form-part">
-
+					
+					
 					<label for="student-ra" class="txt-color">RA</label>
 					<input type="text" name="student-ra" id="student-ra"
 					placeholder="Informe o seu RA">
-
+					
 				</div>
-
+				<i class='bx bxs-book'></i>
 				<div class="form-part">
 
 					<label for="student-course" class="txt-color">Curso</label>
@@ -75,7 +85,7 @@
 
 				<div class="submit-btn-area">
 
-					<button type="submit" class="txt-color" id="submit-btn">Logar</button>
+					<button type="submit" class="txt-color" id="submit-btn">Login</button>
 
 				</div>
 			

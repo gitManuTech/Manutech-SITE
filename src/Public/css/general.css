@@ -6,14 +6,13 @@
 }
 
 *,
-*::before,
-*::after {
+*::before{
 	box-sizing: border-box;
 	color: white;
+	
 }
-
-body {
-	font-family: Arial;
+*::after {
+	color: white;	
 }
 
 p,
@@ -28,7 +27,10 @@ h3 {
 	margin: 0;
 }
 
-ol,
+ol{
+	list-style: none;
+	margin-left: 0px;
+}
 ul {
 	list-style: none;
 }

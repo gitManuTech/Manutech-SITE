@@ -16,13 +16,14 @@ body {
 	justify-content: center;
 	align-items: center;
 	padding: 1em 0;
+	background-color: #ffffff96;
 }
 
 #submit-btn {
 	width: 100%;
-	border: none;
+	border: solid black;
 	padding: 1rem;
-	border-radius: 1rem;
+	border-radius: 20%;
 	background-color: var(--default-form-items-color);
 }
 
