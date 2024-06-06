@@ -9,7 +9,6 @@
 *,
 *::after, ::before{
 	box-sizing: border-box;
-	color: white;	
 }
 
 p,
@@ -19,18 +18,18 @@ main,
 footer,
 h1,
 h2,
-h3 {
+h3,
+ol,
+ul {
 	padding: 0;
 	margin: 0;
 }
 
-ol{
-	list-style: none;
-	margin-left: 0px;
-}
+ol,
 ul {
 	list-style: none;
 }
+
 
 .main {
 	border-top: 1px solid black;

@@ -9,24 +9,30 @@ body{
 	margin: 0px;
 }
 
-#manutech{
-	
-}
-
 #student-form{
 	background-color: #ffffff96;
 	border-radius: 30px;
+	color: white;
+}
+header{
+	color: white;
 }
 
-*::before{
+.bx{
+	display: flex;
+	size: 20px;
 
 
 }
-
 .point-to-other-page {
 	color: blue;
 }
 
+.manutech{
+	text-align: left;
+}
+
 #manutech-logo{
 	border-radius: 50px;
+	justify-content: space-around;
 }
