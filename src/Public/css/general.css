@@ -3,15 +3,12 @@
 	--list-margin: 1em;
 	--form-part-padding: 0.5rem;
 	--post-distance: 0.25em;
+	--txt-color: #FFF;
 }
 
 *,
-*::before{
+*::after, ::before{
 	box-sizing: border-box;
-	color: white;
-	
-}
-*::after {
 	color: white;	
 }
 
@@ -44,8 +41,10 @@ ul {
 	text-align: center;
 }
 
-.txt-color {
-	color: var(--txt-color);
+.icon-site {
+	height: 3em;
+	width: 3em;
+	border-radius: 3em;
 }
 
 .no-border {
@@ -53,10 +52,14 @@ ul {
 }
 
 .point-to-other-page {
-	color: black;
-	text-decoration: underline;
+	color: #7A848D;
+	text-decoration: none;
 }
 
 .no-link {
 	text-decoration: none;
+}
+
+.txt-color {
+	color: var(--txt-color);
 }

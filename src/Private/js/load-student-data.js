@@ -5,5 +5,3 @@ function loadStudentInfo() {
 	infoPlaces[1].innerText = localStorage["student-ra"];
 	infoPlaces[2].innerText = localStorage["student-course"];
 }
-
-

@@ -1,18 +1,23 @@
 <?php 
 
-include("Database/db-connect.php");
+require_once "../Database/db-connect.php";
+require_once "../Database/db-student-queries.php";
 
-// TODO: Change mysqli to prepare
-// TODO: Create function to alter the student course
+// we'll need student's RA because it is unique, so we will need $_SESSION
+// to obtain the user RA from the DB is unnecessary 'cause
+// we are: connecting to the DB, making a query (get_credentials()),
+// separating only the RA to use, making another query (to update now)
 
-$mysql = connect_db();
+// with just $_SESSION, we are just: accessing an array and then making an query
 
-// To update a course I would need... what...?
-// 1 - I would need to alter the student_tbl
-// 2 - Update the record where the current course is
-// 2.2 - But to get the student course I would need something else from the student
-// 2.3 - I could use the student RA
+session_start();
 
-$course_to_alter = $_POST["change-course"];
+$student_ra = $_SESSION["sra"];
+$new_course = $_POST["new-course"];
+
+update_course($new_course, $student_ra);
+
+// after this, we'll need to update $_SESSION
+$_SESSION["scourse"] = $new_course;
 
 ?>
