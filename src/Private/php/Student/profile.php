@@ -54,7 +54,6 @@ $uid = $_SESSION["uid"];
 				<ol class="navbar">
 
 					<li><a href="../logoff.php" onclick="endSession()">Deslogar</a></li>
-
 					<li><a href="account-config.php">Configurar Conta</a></li>
 
 				</ol>
@@ -96,7 +95,6 @@ $uid = $_SESSION["uid"];
 			</div>
 
 		</main>
-
 
 		<footer class="footer">
 
