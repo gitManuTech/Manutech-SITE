@@ -1,11 +1,22 @@
-# Hello! / Olá!
+# About the ManuTech project
 
-Hello there, this is ManuTech and this is a group project!
+ManuTech is a site to post complains found at the Unimar university.
+Simple and straight to the point.
 
 # Introduction
 
-The project name is still being decided, but as a placeholder the name is "Handyman", or "Faz-Tudo" in my language.
-This project's repository is for a purpose similar as a "fail-safe", in case things go wrong with the main project.
+The project was made for a assignment at the group's current university, Unimar.
+The assignment purpose was quite simple: to make something that could 
+help the university.
+And _ManuTech_ is here to do just that!
+
+## About ManuTech
+
+This project is quite simple: let there be a problem-- an lightbulb explodes
+in some hall where students pass through with frequency, its shards falls into
+the ground waiting for someone step and cut his feet. But you can't warn
+everyone, so what do you do? With ManuTech, you could warn not just the
+students, but also the faculty itself that something bad had happened!
 
 ## Members of this project
 
@@ -14,11 +25,6 @@ This project's repository is for a purpose similar as a "fail-safe", in case thi
 - Joaquim Pedro Augusto de Castro Leite Oliveira, 2014803.
 - José Rodolfo Faustino Guimares Junior, 1994088
 - João Paulo Ferrari Sant'Ana, 2007857
-
-## Objectives of this project
-
-Our objective is quite simple: make a site for Unimar, group members' current university, so that students
-may report about abnormal behavior around the campus: behavior which is not legal for study facilities.
 
 ## Tools used in this project
 
