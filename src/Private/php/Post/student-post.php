@@ -70,6 +70,5 @@
 		</footer>
 
 		<script type="text/javascript" src="../../js/load-student-data.js"></script>
-
 	</body>
 </html>
