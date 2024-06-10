@@ -29,7 +29,7 @@ echo "
 	<div class=\"post-header-container\">
 		<div class=\"post-header\">
 			<h2 class=\"post-title\">
-				<a href=\"".gen_post_link($title, $block, $desc)."\" class=\"no-link\">
+				<a class=\"no-link\" href=\"".gen_post_link($title, $block, $desc)."\">
 					{$title}
 				</a>
 			</h2>
