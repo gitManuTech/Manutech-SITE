@@ -12,12 +12,10 @@
 
 .navbar li {
 	padding: var(--list-padding);
-	float: right;
 }
 
 .navbar a {
 	text-decoration: none;
-	float: right;
 }
 
 .logo-container {
