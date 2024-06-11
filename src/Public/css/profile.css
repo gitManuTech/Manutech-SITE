@@ -2,7 +2,7 @@
 	font-size: 1rem;
 }
 
-#student-container-info {
+#student-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -18,19 +18,8 @@
 	align-items: center;
 }
 
-.post {
-	margin-bottom: var(--post-distance);
-}
-
-.post-header a {
-	text-decoration: none;
-	color: #4949EF;
-}
-
-.post-header:hover {
-	color: blue;
-}
-
-.no-link-style {
-	text-decoration: none;
+#container-redirect {
+	margin-top: 0.5em;
+	padding-bottom: 0.25em;
+	display: flex;
 }

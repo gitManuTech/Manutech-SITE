@@ -1,38 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
 
-body{
-	background:no-repeat url("background-about-project.jpg");
+body {
+	background: no-repeat url("../img/background-about-project.jpg");
 	background-size: 100%;
-	margin: 0px;
 }
 
-#manutech-logo{
-	border-radius: 50px;
-}
-
-main{
+main {
 	height: 83vh;
+	font-family: Graduate
 }
 
-.welcome{
+.welcome {
 	display: flex;
 	text-align: center;
 	font-size: 65px;
-	font-family:Graduate-serif;
+	font-family: Graduate-serif;
 	border: 2pt solid white;
-	}
-
-
-.introduction-text{
-	font-family:Graduate;
 }
 
-main{
-	color:white;
-	font-family:Graduate
-}
 
-footer{
-	color:white;
+.introduction-text {
+	font-family: Graduate;
 }
-

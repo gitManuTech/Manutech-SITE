@@ -9,9 +9,7 @@ $uid = $_SESSION["uid"];
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 	<head>
-
 		<title>ManuTech - Perfil</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
@@ -19,11 +17,10 @@ $uid = $_SESSION["uid"];
 		<link rel="stylesheet" type="text/css" href="../../../Public/css/general.css">
 		<link rel="stylesheet" type="text/css" href="../../../Public/css/header.css">
 		<link rel="stylesheet" type="text/css" href="../../../Public/css/profile.css">
-
+		<link rel="stylesheet" type="text/css" href="../../../Public/css/post.css">
 	</head>
 
 	<body onload="loadStudentInfo()">
-
 		<header id="main-header" class="header">
 
 			<div id="student-container-info">
@@ -57,7 +54,6 @@ $uid = $_SESSION["uid"];
 				<ol class="navbar">
 
 					<li><a href="../logoff.php" onclick="endSession()">Deslogar</a></li>
-
 					<li><a href="account-config.php">Configurar Conta</a></li>
 
 				</ol>
@@ -74,28 +70,31 @@ $uid = $_SESSION["uid"];
 
 			</div>
 
-			<div id="container-btn-problem">
+			<div id="container-redirects">
 
-				<p class="look-like-btn">
+				<div id="post-problem">
 
-					<a href="../Post/problem.php" class="no-link">Achou um problema? Avise aqui!</a>
+					<p class="look-like-btn">
 
-				</p>
+						<a href="../Post/problem.php" class="no-link">Achou um problema? Avise aqui!</a>
 
-			</div>
+					</p>
 
-			<div id="see-posts">
+				</div>
 
-				<p class="look-like-btn">
+				<div id="see-posts">
 
-					<a href="../Home/home.php" class="no-link">Ver reclamações de outros alunos</a>
+					<p class="look-like-btn">
 
-				</p>
+						<a href="../Home/home.php" class="no-link">Ver reclamações de outros alunos</a>
+
+					</p>
+
+				</div>
 
 			</div>
 
 		</main>
-
 
 		<footer class="footer">
 
@@ -105,7 +104,6 @@ $uid = $_SESSION["uid"];
 
 		<script type="text/javascript" src="../../js/load-student-data.js"></script>
 		<script type="text/javascript" src="../../js/unload-student-data.js"></script>
-
 	</body>
 
 </html>

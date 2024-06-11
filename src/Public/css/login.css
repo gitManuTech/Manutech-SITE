@@ -1,38 +1,12 @@
-.forgot-register {
-	text-align: center;
-	margin: 1em;
-}
-
-body{
-	background:no-repeat url("background-login.jpg");
+body {
+	background: no-repeat url("../img/background-login.jpg");
 	background-size: 100%;
-	margin: 0px;
 }
 
-#student-form{
-	background-color: #ffffff96;
-	border-radius: 30px;
-	color: white;
-}
-header{
-	color: white;
-}
-
-.bx{
-	display: flex;
-	size: 20px;
-
-
-}
-.point-to-other-page {
-	color: blue;
-}
-
-.manutech{
-	text-align: left;
-}
-
-#manutech-logo{
-	border-radius: 50px;
+#manutech-logo {
 	justify-content: space-around;
+}
+
+.forgot-register {
+	margin: 1em;
 }
