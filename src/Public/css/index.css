@@ -3,10 +3,11 @@
 body {
 	background: no-repeat url("../img/background-index.jpg");
 	background-size: 100%;
+	
 }
 
-header {
-	color: black;
+header{
+	color: white;
 	text-align: center;
 }
 
@@ -35,11 +36,24 @@ h2 {
 #introduction {
 	font-weight: 400;
 	font-style: normal;
+	  }
+	  
+h2{
+	background-color: darkblue;
 }
 
-.intro-txt {
-	padding-left: 1em;
-	overflow-wrap: break-word;
-	hyphens: auto;
-	max-width: 95%;
+h1{
+	font-style: italic;
+}
+
+footer{
+	color: black;
+}
+
+.point-to-other-page {
+	color: #0F76B0;
+}
+
+main{
+	height: 80vh;
 }
