@@ -58,6 +58,10 @@ ul {
 	text-decoration: none;
 }
 
+.txt-center {
+	text-align: center;
+}
+
 .txt-color {
 	color: var(--txt-color);
 }
