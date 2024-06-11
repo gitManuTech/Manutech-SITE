@@ -4,10 +4,11 @@ body{
 	background:no-repeat url("background-index.jpg");
 	background-size: 100%;
 	margin: 0px;
+	
 }
 
 header{
-	color: black;
+	color: white;
 	text-align: center;
 }
 
@@ -50,5 +51,6 @@ footer{
 
 main{
 	height: 80vh;
+	
 }
 
