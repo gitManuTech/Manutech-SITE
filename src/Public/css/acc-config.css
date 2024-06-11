@@ -6,3 +6,16 @@ body {
 main {
 	height: 80vh;
 }
+
+#account-modifs-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.alter-acc-data {
+	border-radius: 2rem;
+	padding: 0.25rem;
+	cursor: pointer;
+}
