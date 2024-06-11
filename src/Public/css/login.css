@@ -10,3 +10,8 @@ body {
 .forgot-register {
 	margin: 1em;
 }
+
+.txt-login{
+	font-size: 15px;
+	text-align: center; 
+}

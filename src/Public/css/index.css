@@ -3,7 +3,6 @@
 body {
 	background: no-repeat url("../img/background-index.jpg");
 	background-size: 100%;
-	
 }
 
 header{
@@ -15,14 +14,9 @@ main {
 	font-family: Graduate;
 }
 
-h1 {
-	font-style: italic;
-}
-
 h2 {
-	background-color: darkblue;
+	background-color: #194576;
 }
-
 
 .section-header {
 	margin: 10px;
@@ -32,23 +26,10 @@ h2 {
 	border: 5px solid white;
 	padding-left: var(--section-header-padding);
 }
-
-
-#introduction {
-	font-weight: 400;
-	font-style: normal;
-	  }
 	  
 h2{
+	font-size: 50px;
 	background-color: darkblue;
-}
-
-h1{
-	font-style: italic;
-}
-
-footer{
-	color: black;
 }
 
 .point-to-other-page {
@@ -56,5 +37,15 @@ footer{
 }
 
 main{
+	text-align: center;
+	color: white;
 	height: 80vh;
+}
+
+.txt-color {
+	margin: 25px;
+	color: white;
+	font-weight: 400;
+	font-size: 25px;
+	font-family: Graduate;
 }

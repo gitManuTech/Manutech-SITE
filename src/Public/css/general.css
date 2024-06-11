@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 :root {
 	--list-padding: 0.75rem;
 	--list-margin: 1em;
@@ -9,6 +12,7 @@
 *,
 *::after, ::before{
 	box-sizing: border-box;
+	color: white;
 }
 
 p,
@@ -38,6 +42,8 @@ ul {
 .footer {
 	padding: 1em;
 	text-align: center;
+	color: white;
+	height:83px;
 }
 
 .icon-site {
@@ -59,5 +65,7 @@ ul {
 }
 
 .txt-color {
-	color: var(--txt-color);
+	color: white;
+	font-size: 15px;
+	font-family: Graduate;
 }

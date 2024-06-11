@@ -18,11 +18,14 @@ body {
 }
 
 #submit-btn {
+	display: flex;
+	justify-content: center;
+	background-color: #483D8B;
+	height: 100%;
 	width: 100%;
-	border: solid black;
-	padding: 1rem;
-	border-radius: 20%;
-	background-color: var(--default-form-items-color);
+	border: 3px solid white;
+	border-radius: 15%;
+	line-height: 50px;
 }
 
 .main {
@@ -36,6 +39,7 @@ body {
 
 .student-form-container {
 	background-color: #ffffff96;
+	border: 5px solid #483D8B;
 	border-radius: 30px;
 	padding: 0.5rem;
 }
@@ -61,7 +65,7 @@ body {
 	box-shadow: 2px 3px 2px var(--default-form-items-color);
 }
 
-.submit-btn-area button {
+.submit-btn-area button{
 	cursor: pointer;
 }
 
