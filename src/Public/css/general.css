@@ -64,6 +64,10 @@ ul {
 	text-decoration: none;
 }
 
+.txt-center {
+	text-align: center;
+}
+
 .txt-color {
 	color: white;
 	font-size: 15px;

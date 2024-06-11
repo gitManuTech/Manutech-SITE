@@ -6,6 +6,6 @@ session_start();
 
 disable_student_acc($_SESSION["sname"], $_SESSION["sroom"], $_SESSION["scourse"]);
 
-header("Location: ../../Public/html/index.html");
+header("Location: ../../../Public/html/index.html");
 
 ?>

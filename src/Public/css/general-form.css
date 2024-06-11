@@ -57,6 +57,10 @@ body {
 	align-items: center;
 }
 
+.form-part label {
+	padding-bottom: 0.75em;
+}
+
 .form-part input {
 	margin: 0.6rem 0;
 	padding: 0.8rem 1.2rem;

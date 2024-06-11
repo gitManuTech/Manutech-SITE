@@ -1,0 +1,12 @@
+.post {
+	margin-bottom: var(--post-distance);
+	padding-left: 1rem;
+}
+
+.post-header {
+	padding: 0.35em 0em;
+}
+
+.post-title a {
+	color: black;
+}

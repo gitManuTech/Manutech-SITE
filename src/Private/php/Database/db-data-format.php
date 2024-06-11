@@ -6,7 +6,7 @@ function generate_post_home(string $title, string $desc, string $block, string $
 echo "
 <div class=\"post\">
 	<div class=\"post-header\">
-		<h2>
+		<h2 class=\"post-title\" >
 			<a href=\"".gen_post_link($title, $block, $desc)."\" class=\"no-link\">
 				<span class=\"title\">
 					{$title}
@@ -28,9 +28,11 @@ echo "
 <div class=\"post\">
 	<div class=\"post-header-container\">
 		<div class=\"post-header\">
-			<a href=\"".gen_post_link($title, $block, $desc)."\" class=\"no-link\">
-				<h2>{$title}</h2>
-			</a>
+			<h2 class=\"post-title\">
+				<a class=\"no-link\" href=\"".gen_post_link($title, $block, $desc)."\">
+					{$title}
+				</a>
+			</h2>
 		</div>
 	</div>
 	<div class=\"post-desc\">

@@ -2,9 +2,10 @@
 	font-size: 1rem;
 }
 
-#student-container {
+#student-container-info {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 }
 
@@ -12,14 +13,14 @@
 	text-decoration: none;
 }
 
+#container-redirects {
+	display: flex;
+	justify-content: center;
+	padding-top: 0.75rem;
+}
+
 .name-classroom {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-#container-redirect {
-	margin-top: 0.5em;
-	padding-bottom: 0.25em;
-	display: flex;
 }

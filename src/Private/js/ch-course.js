@@ -1,9 +1,3 @@
-function updateLocalStorge() {
-	const currentCourse = document.getElementById("new-course");
-
-	localStorage.setItem("student-course", currentCourse.value);
-}
-
 function prepareReq(data) {
 	const formData = new FormData();
 
@@ -19,11 +13,16 @@ function updateStudentCourse() {
 
 	xhr.open("POST", "../ServerSide/ch-cour-server.php", true);
 
+	if(newCourse.value.length === 0) {
+		window.alert("Campo não foi preenchido")
+		newCourse.focus();
+		return false;
+	}
+
 	xhr.onload = function() {
 		window.alert("Atualizando curso...");
+		localStorage.setItem("student-course", newCourse.value.trim());
 		window.location.reload();
-
-		updateStudentCourse();
 	}
 
 	xhr.send(req);
