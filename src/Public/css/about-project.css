@@ -5,20 +5,34 @@ body {
 	background-size: 100%;
 }
 
+header{
+	color: white;
+}
+
 main {
 	height: 83vh;
-	font-family: Graduate
+	font-family: Graduate;
+	color: white;
 }
 
 .welcome {
 	display: flex;
+	line-height: 250%;
 	text-align: center;
 	font-size: 65px;
 	font-family: Graduate-serif;
-	border: 2pt solid white;
+	border: 5px solid white;
+	padding-left: var(--section-header-padding);
+	background-color: darkblue;
+	margin: 10px;
 }
 
+a{
+	color: white;
+}
 
 .introduction-text {
 	font-family: Graduate;
 }
+
+
