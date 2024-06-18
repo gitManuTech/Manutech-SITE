@@ -56,7 +56,17 @@ function select_posts(int $uid): mysqli_result {
 }
 
 /**
+ * This function will register the problem that was found by the student
+ * in the database
  *
+ * @author	João Paulo Ferrari Sant'Ana	joaopauloferrarisantana@gmail.com
+ * @version	2.0.0				Will register the problem to the DB
+ * @since 	1.9.0
+ *
+ * @param string $ptitle The problem title
+ * @param string $pblock The block where the problem occured
+ * @param string $pdesc The description of the problem
+ * @param int $uid The student id that is in the DB
  * */
 function send_problem_data(string $ptitle, string $pblock, string $pdesc, int $uid): void {
 	$mysql		= connect_db();
@@ -72,7 +82,14 @@ function send_problem_data(string $ptitle, string $pblock, string $pdesc, int $u
 }
 
 /**
+ * This function will update the course of the student
  *
+ * @author	João Paulo Ferrari Sant'Ana	joaopauloferrarisantana@gmail.com
+ * @version	1.5.0				Will update the course
+ * @since	1.3.0
+ *
+ * @param string $course_to_update
+ * @param int  $sra
  * */
 function update_course(string $course_to_update, int $sra): void {
 	$mysql		= connect_db();
