@@ -9,17 +9,17 @@ $name	= trim($_POST["student-name"]);
 $ra	= trim($_POST["student-ra"]);
 $course = trim($_POST["student-course"]);
 
-if(is_student_registered($name, $ra, $course) == 0) {
+if(is_student_registered($ra) == 0) {
 	echo "Estundate não está registrado.";
-	exit(0);
+	exit(1);
 }
 
-if(is_student_acc_disabled($name) === true) {
+if(is_student_acc_disabled($ra) === true) {
 	echo "Conta do estudante foi desabilitada.";
-	exit(0);
+	exit(1);
 }
 
-$student = get_credentials($name, $ra, $course)->fetch_row();
+$student = get_credentials($ra)->fetch_row();
 
 $_SESSION["uid"]	= $student[0];
 $_SESSION["sname"]	= $student[1];
