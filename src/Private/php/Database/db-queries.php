@@ -18,25 +18,22 @@ require_once "db-connect.php";
  *
  * @return mysqli_result|bool
  * */
-function get_credentials(string $sname, string $sra, string $scourse)
-: mysqli_result | bool {
+function get_credentials(string $sra): mysqli_result | bool {
 	$mysql		= connect_db();
 
-	$select_info	= "SELECT
-		student_id, student_name, student_ra, student_course
-		FROM student_tbl WHERE
-		student_name = ? AND student_ra = ? AND student_course = ?";
+	$select_data	= "SELECT student_id, student_name, student_ra, student_course
+		FROM student_tbl WHERE student_ra = ?";
 
-	$stmt		= $mysql->prepare($select_info);
+	$stmt = $mysql->prepare($select_data);
 
-	$stmt->bind_param("sss", $sname, $sra, $scourse);
+	$stmt->bind_param("s", $sra);
 	$stmt->execute();
 
-	$query = $stmt->get_result();
+	$student_data = $stmt->get_result();
 
 	$stmt->close();
 
-	return $query;
+	return $student_data;
 }
 
 /**
