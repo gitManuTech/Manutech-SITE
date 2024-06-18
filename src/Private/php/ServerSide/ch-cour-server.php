@@ -8,7 +8,7 @@ require_once "../Database/db-student-queries.php";
 // we are: connecting to the DB, making a query (get_credentials()),
 // separating only the RA to use, making another query (to update now)
 
-// with just $_SESSION, we are just: accessing an array and then making an query
+// with just $_SESSION, we are just accessing an array and then making an query
 
 session_start();
 
