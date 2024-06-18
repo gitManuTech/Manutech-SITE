@@ -32,6 +32,9 @@ function get_credentials(string $sra): mysqli_result | bool {
 	$student_data = $stmt->get_result();
 
 	$stmt->close();
+	$mysql->close();
+
+	$mysql = NULL;
 
 	return $student_data;
 }
@@ -60,6 +63,9 @@ function insert_into_db(string $sname, string $sra, string $scourse): void {
 	$stmt->bind_param("sss", $sname, $sra, $scourse);
 	$stmt->execute();
 	$stmt->close();
+	$mysql->close();
+
+	$mysql = NULL;
 }
 
 /**
@@ -73,13 +79,13 @@ function insert_into_db(string $sname, string $sra, string $scourse): void {
  *
  * @param string $sname
  * */
-function disable_student_acc(string $sname): void {
+function disable_student_acc(string $sra): void {
 	$mysql	= connect_db();
-	$update	= "UPDATE student_tbl SET student_active = 0 WHERE student_name = ?";
+	$update	= "UPDATE student_tbl SET student_active = 0 WHERE student_ra = ?";
 
 	$stmt = $mysql->prepare($update);
 
-	$stmt->bind_param("s", $sname);
+	$stmt->bind_param("s", $sra);
 	$stmt->execute();
 	$stmt->close();
 	$mysql->close();
