@@ -2,6 +2,16 @@
 
 require_once "db-connect.php";
 
+/**
+ * This function will execute a JOIN in the Database
+ * and get all posts to display at the homepage
+ * 
+ * @author	João Paulo Ferrari Sant'Ana	joaopauloferrarisantana@gmail.com
+ * @version	1.0.0				Will select all posts made by students
+ * @since	2.0.0
+ *
+ * @returns mysqli_result
+ * */
 function select_all_student_posts(): mysqli_result {
 	$mysql = connect_db();
 
@@ -17,6 +27,17 @@ function select_all_student_posts(): mysqli_result {
 	return $data;
 }
 
+/**
+ * This function will select all posts made by one user and display at his profile
+ *
+ * @author	João Paulo Ferrari Sant'Ana	joaopauloferrarisantana@gmail.com
+ * @version	1.0.0				Will select all posts made by student
+ * @since	2.0.0
+ *
+ * @param int $uid the user id in the database
+ *
+ * @returns mysqli_result
+ * */
 function select_posts(int $uid): mysqli_result {
 	$mysql		= connect_db();
 	$stu_posts	= "SELECT problem_title Title, problem_desc DSC, problem_block Block
@@ -34,6 +55,9 @@ function select_posts(int $uid): mysqli_result {
 	return $result;
 }
 
+/**
+ *
+ * */
 function send_problem_data(string $ptitle, string $pblock, string $pdesc, int $uid): void {
 	$mysql		= connect_db();
 	$complain	= "INSERT INTO
@@ -47,6 +71,9 @@ function send_problem_data(string $ptitle, string $pblock, string $pdesc, int $u
 	$stmt->close();
 }
 
+/**
+ *
+ * */
 function update_course(string $course_to_update, int $sra): void {
 	$mysql		= connect_db();
 	$alter_course	= "UPDATE student_tbl SET student_course = ? WHERE student_ra = ?";
