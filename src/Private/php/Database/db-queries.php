@@ -75,10 +75,16 @@ function insert_into_db(string $sname, string $sra, string $scourse): void {
  * */
 function disable_student_acc(string $sname): void {
 	$mysql	= connect_db();
-	$update	= "UPDATE student_tbl SET student_active = 0 WHERE student_name = \"".$sname."\"";
+	$update	= "UPDATE student_tbl SET student_active = 0 WHERE student_name = ?";
 
-	$mysql->query($update);
+	$stmt = $mysql->prepare($update);
+
+	$stmt->bind_param("s", $sname);
+	$stmt->execute();
+	$stmt->close();
 	$mysql->close();
+
+	$mysql = NULL;
 }
 
 ?>
