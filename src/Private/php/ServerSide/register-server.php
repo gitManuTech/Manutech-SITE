@@ -12,14 +12,14 @@ $name	= trim($_POST["student-name"]);
 $ra	= trim($_POST["student-ra"]);
 $course = trim($_POST["student-course"]);
 
-if(is_student_registered($name, $ra, $course) == 1) {
+if(is_student_registered($ra) == 1) {
 	echo "Estudante já possui conta.";
 	exit(1);
 }
 
 insert_into_db($name, $ra, $course);
 
-$student = get_credentials($name, $ra, $course)->fetch_row();
+$student = get_credentials($ra)->fetch_row();
 
 $_SESSION["uid"]	= $student[0];
 $_SESSION["sname"]	= $student[1];
