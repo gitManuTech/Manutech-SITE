@@ -47,13 +47,15 @@ function send_problem_data(string $ptitle, string $pblock, string $pdesc, int $u
 	$stmt->close();
 }
 
-// TODO: Change mysqli to prepare
-function update_course(string $course_to_transfer, int $sra): void {
+function update_course(string $course_to_update, int $sra): void {
 	$mysql		= connect_db();
-	$alter_course	= "UPDATE student_tbl SET
-		student_course = \"{$course_to_transfer}\" WHERE student_ra = {$sra}";
+	$alter_course	= "UPDATE student_tbl SET student_course = ? WHERE student_ra = ?";
 
-	$mysql->query($alter_course);
+	$stmt = $mysql->prepare($alter_course);
+
+	$stmt->bind_param("si", $course_to_update, $sra);
+	$stmt->execute();
+	$stmt->close();
 	$mysql->close();
 
 	$mysql = NUll;
