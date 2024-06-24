@@ -1,6 +1,6 @@
 <?php
 
-require_once "db-queries.php";
+require_once "db-connect.php";
 
 /**
  * This function will check if the student is already registered in the DB
@@ -9,14 +9,23 @@ require_once "db-queries.php";
  * @version	2.1.0				Will return an int that represents the student row
  * @since	1.0.0
  *
- * @param string $ra the student ("registro estudantil" na minha lingua)
+ * @param string $ra the student register number ("registro estudantil" on my language)
  *
  * @return int
  * */
 function is_student_registered(string $sra): int {
-	$student_data = get_credentials($sra)->num_rows;
+	$mysql		= connect_db();
+	$search_acc	= "SELECT COUNT(1) FROM student_tbl WHERE student_ra = ?";
 
-	return $student_data;
+	$stmt = $mysql->prepare($search_acc);
+
+	$stmt->bind_param("s", $sra);
+	$stmt->execute();
+
+	$data		= $stmt->get_result();
+	$acc_exist	= $data->fetch_array(MYSQLI_NUM);
+
+	return $acc_exist[0];
 }
 
 /**
