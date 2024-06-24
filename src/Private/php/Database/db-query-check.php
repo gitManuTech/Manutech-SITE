@@ -25,6 +25,9 @@ function is_student_registered(string $sra): int {
 	$data		= $stmt->get_result();
 	$acc_exist	= $data->fetch_array(MYSQLI_NUM);
 
+	$stmt->close();
+	$mysql->close();
+
 	return $acc_exist[0];
 }
 
