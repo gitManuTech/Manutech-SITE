@@ -4,11 +4,10 @@ session_start();
 
 require_once "../Database/db-queries.php";
 require_once "../Database/db-query-check.php";
-require_once "../Database/db-status.php";
+require_once "../Enums/database-checks.php";
+// require_once "json.php";
 
 use Database\Enums;
-
-// require_once "json.php";
 
 // $student_data = get_json();
 
