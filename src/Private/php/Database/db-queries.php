@@ -18,25 +18,25 @@ require_once "db-connect.php";
  *
  * @return mysqli_result|bool
  * */
-function get_credentials(string $sname, string $sra, string $scourse)
-: mysqli_result | bool {
+function get_credentials(string $sra): mysqli_result | bool {
 	$mysql		= connect_db();
 
-	$select_info	= "SELECT
-		student_id, student_name, student_ra, student_course
-		FROM student_tbl WHERE
-		student_name = ? AND student_ra = ? AND student_course = ?";
+	$select_data	= "SELECT student_id, student_name, student_ra, student_course
+		FROM student_tbl WHERE student_ra = ?";
 
-	$stmt		= $mysql->prepare($select_info);
+	$stmt = $mysql->prepare($select_data);
 
-	$stmt->bind_param("sss", $sname, $sra, $scourse);
+	$stmt->bind_param("s", $sra);
 	$stmt->execute();
 
-	$query = $stmt->get_result();
+	$student_data = $stmt->get_result();
 
 	$stmt->close();
+	$mysql->close();
 
-	return $query;
+	$mysql = NULL;
+
+	return $student_data;
 }
 
 /**
@@ -63,6 +63,9 @@ function insert_into_db(string $sname, string $sra, string $scourse): void {
 	$stmt->bind_param("sss", $sname, $sra, $scourse);
 	$stmt->execute();
 	$stmt->close();
+	$mysql->close();
+
+	$mysql = NULL;
 }
 
 /**
@@ -76,12 +79,18 @@ function insert_into_db(string $sname, string $sra, string $scourse): void {
  *
  * @param string $sname
  * */
-function disable_student_acc(string $sname): void {
+function disable_student_acc(string $sra): void {
 	$mysql	= connect_db();
-	$update	= "UPDATE student_tbl SET student_active = 0 WHERE student_name = \"".$sname."\"";
+	$update	= "UPDATE student_tbl SET student_active = 0 WHERE student_ra = ?";
 
-	$mysql->query($update);
+	$stmt = $mysql->prepare($update);
+
+	$stmt->bind_param("s", $sra);
+	$stmt->execute();
+	$stmt->close();
 	$mysql->close();
+
+	$mysql = NULL;
 }
 
 ?>

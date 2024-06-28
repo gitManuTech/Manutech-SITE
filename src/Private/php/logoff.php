@@ -1,11 +1,11 @@
 <?php
 
 session_start();
-session_abort();
-session_unset();
+
+unset($_SESSION);
+
 session_destroy();
 
-header("HTTP /1.1 200 OK");
-header("Location: ../../Public/html/index.html");
+header("location: ../../Public/html/");
 
 ?>

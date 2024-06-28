@@ -1,18 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 :root {
 	--list-padding: 0.75rem;
 	--list-margin: 1em;
 	--form-part-padding: 0.5rem;
 	--post-distance: 0.25em;
+	--txt-color: #FFF;
 }
 
 *,
-*::before,
-*::after {
+*::after, ::before{
 	box-sizing: border-box;
-}
-
-body {
-	font-family: Arial;
+	color: white;
 }
 
 p,
@@ -22,7 +22,9 @@ main,
 footer,
 h1,
 h2,
-h3 {
+h3,
+ol,
+ul {
 	padding: 0;
 	margin: 0;
 }
@@ -32,6 +34,7 @@ ul {
 	list-style: none;
 }
 
+
 .main {
 	border-top: 1px solid black;
 }
@@ -39,10 +42,14 @@ ul {
 .footer {
 	padding: 1em;
 	text-align: center;
+	color: white;
+	height:83px;
 }
 
-.txt-color {
-	color: var(--txt-color);
+.icon-site {
+	height: 3em;
+	width: 3em;
+	border-radius: 3em;
 }
 
 .no-border {
@@ -50,10 +57,19 @@ ul {
 }
 
 .point-to-other-page {
-	color: black;
-	text-decoration: underline;
+	color: #CCAFAD;
 }
 
 .no-link {
 	text-decoration: none;
+}
+
+.txt-center {
+	text-align: center;
+}
+
+.txt-color {
+	color: white;
+	font-size: 15px;
+	font-family: Graduate;
 }

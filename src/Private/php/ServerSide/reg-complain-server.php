@@ -1,7 +1,7 @@
 <?php
 
 require_once "../Database/db-student-queries.php";
-require_once "../redirects.php";
+require_once "../Links/gen-links.php";
 
 session_start();
 
@@ -13,6 +13,7 @@ $prob_descr = $_POST["problem-descriptor"];
 $uid = $_SESSION["uid"];
 
 send_problem_data($prob_title, $prob_block, $prob_descr, $uid);
-go_to_post($prob_title, $prob_block, $prob_descr);
+
+header("Location: ".gen_post_link($prob_title, $prob_block, $prob_descr));
 
 ?>

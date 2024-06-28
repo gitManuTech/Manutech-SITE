@@ -1,36 +1,51 @@
-.div-header {
-	padding-left: var(--section-header-padding);
-}
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
 
-body{
-	background-color: #1F2122;
+body {
+	background: no-repeat url("../img/background-index.jpg");
+	background-size: 100%;
 }
 
 header{
-	color: #fff;
+	color: white;
 	text-align: center;
 }
 
-div{
-	color: #fff;
-	text-align: right;
+main {
+	font-family: Graduate;
 }
 
-h1{
-	font-style: italic;
+h2 {
+	background-color: #194576;
 }
 
-footer{
-	color: #fff;
+.section-header {
+	margin: 10px;
+	line-height: 250%;
+	text-size-adjust: 30%;
+	font-size: 25px;
+	border: 5px solid white;
+	padding-left: var(--section-header-padding);
+}
+	  
+h2{
+	font-size: 50px;
+	background-color: darkblue;
 }
 
 .point-to-other-page {
 	color: #0F76B0;
 }
 
-p{
+main{
 	text-align: center;
-	font-size: 25px;
+	color: white;
+	height: 80vh;
 }
 
-
+.txt-color {
+	margin: 25px;
+	color: white;
+	font-weight: 400;
+	font-size: 25px;
+	font-family: Graduate;
+}

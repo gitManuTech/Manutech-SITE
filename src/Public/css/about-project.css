@@ -1,3 +1,54 @@
-.member-name {
-	font-weight: bold;
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+
+body {
+	background: no-repeat url("../img/background-about-project.jpg");
+	background-size: 100%;
+}
+
+header{
+	color: white;
+}
+
+main {
+	height: 83vh;
+	font-family: Graduate;
+	color: white;
+}
+
+a{
+	color: white;
+}
+
+.intro-txt{
+	text-align: justify;
+}
+
+.tools-used-header{
+	line-height: 30px;
+	border: 5px solid #3f58ba;
+	width: 27%;
+}
+
+.members-name-header{
+	line-height: 30px;
+	border: 5px solid #3f58ba;
+	width: 16%;
+}
+
+.introduction-header{
+	margin-top: 10px;
+	border: 5px solid #3f58ba;
+	width: 20%;
+}
+
+.introduction-text {
+	font-family: Graduate;
+	margin: 10px;
+	font-size: 20px;
+}
+
+.tools-used,.mem-name{
+	margin: 5px;
+	font-size: 20px;
+	font-family: Graduate;
 }

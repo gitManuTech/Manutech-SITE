@@ -1,8 +1,17 @@
+body {
+	background: no-repeat url("../img/background-login.jpg");
+	background-size: 100%;
+}
+
+#manutech-logo {
+	justify-content: space-around;
+}
+
 .forgot-register {
-	text-align: center;
 	margin: 1em;
 }
 
-.point-to-other-page {
-	color: blue;
+.txt-login{
+	font-size: 15px;
+	text-align: center; 
 }

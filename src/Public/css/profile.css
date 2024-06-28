@@ -5,6 +5,7 @@
 #student-container-info {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 }
 
@@ -12,25 +13,14 @@
 	text-decoration: none;
 }
 
+#container-redirects {
+	display: flex;
+	justify-content: center;
+	padding-top: 0.75rem;
+}
+
 .name-classroom {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-.post {
-	margin-bottom: var(--post-distance);
-}
-
-.post-header a {
-	text-decoration: none;
-	color: #4949EF;
-}
-
-.post-header:hover {
-	color: blue;
-}
-
-.no-link-style {
-	text-decoration: none;
 }

@@ -4,28 +4,34 @@ session_start();
 
 require_once "../Database/db-queries.php";
 require_once "../Database/db-query-check.php";
+require_once "../Enums/database.php";
 
-$name	= $_POST["student-name"];
-$ra	= $_POST["student-ra"];
-$course = $_POST["student-course"];
+use Database\Enums;
 
-if(is_student_registered($name, $ra, $course) == 0) {
+$has_no_reg = Database\Enums\STUDENT_STAT::HAS_NO_REG;
+$acc_disabled = Database\Enums\STUDENT_ACC::DISABLED;
+
+$name	= trim($_POST["student-name"]);
+$ra	= trim($_POST["student-ra"]);
+$course = trim($_POST["student-course"]);
+
+if(is_student_registered($ra) == $has_no_reg->value) {
 	echo "Estundate não está registrado.";
-	exit(0);
+	exit(1);
 }
 
-if(is_student_acc_disabled($name) === true) {
+if(is_student_acc_disabled($ra) === $acc_disabled->value) {
 	echo "Conta do estudante foi desabilitada.";
-	exit(0);
+	exit(1);
 }
 
-$student = get_credentials($name, $ra, $course)->fetch_row();
+$student = get_credentials($ra)->fetch_row();
 
 $_SESSION["uid"]	= $student[0];
 $_SESSION["sname"]	= $student[1];
 $_SESSION["sra"]	= $student[2];
 $_SESSION["scourse"]	= $student[3];
 
-header("Location: ../profile.php");
+header("Location: ../Student/profile.php");
 
 ?>

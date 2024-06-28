@@ -19,9 +19,8 @@
 
 			<div id="container-site">
 
-				<img src="../../../Public/img/MANUTECH LOGO.jpg"
-				height="48" width="48"
-				alt="ManuTech logo" id="manutech-logo">
+				<img src="../../../Public/img/MANUTECH LOGO.jpg" alt="ManuTech logo"
+				class="icon-site" id="manutech-logo">
 
 			</div>
 
@@ -71,6 +70,5 @@
 		</footer>
 
 		<script type="text/javascript" src="../../js/load-student-data.js"></script>
-
 	</body>
 </html>

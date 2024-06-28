@@ -1,24 +1,31 @@
 <?php
 
-require_once "db-queries.php";
+require_once "../Database/db-student-queries.php";
+require_once "../Enums/database.php";
+require_once "db-connect.php";
+
+use Database\Enums;
 
 /**
  * This function will check if the student is already registered in the DB
  *
  * @author	João Paulo Ferrari Sant'Ana 	joaopauloferrarisanta@gmail.com
- * @version	2.0.1				Will return an int that represents the student row
+ * @version	2.1.0				Will return an int that represents the student row
  * @since	1.0.0
  *
- * @param string $sname the student name
- * @param string $sclass the student class
- * @param string $scourse the student course
+ * @param string $sra Student register number
  *
  * @return int
  * */
-function is_student_registered(string $sname, string $sclass, string $scourse): int {
-	$student_data = get_credentials($sname, $sclass, $scourse)->num_rows;
+function is_student_registered(string $sra): int {
+	$has_reg = \Database\Enums\STUDENT_STAT::HAS_REG->value;
+	$has_no_reg = \Database\Enums\STUDENT_STAT::HAS_NO_REG->value;
 
-	return $student_data;
+	$search_acc = "SELECT COUNT(1) FROM student_tbl WHERE student_ra = ?";
+
+	$student_row = query_with_ra($search_acc, $sra);
+
+	return ($student_row[0] == $has_reg ? $has_reg : $has_no_reg);
 }
 
 /**
@@ -30,26 +37,19 @@ function is_student_registered(string $sname, string $sclass, string $scourse): 
  * @version	1.0.0				Will return an bool that represents the account status
  * @since	1.0.0
  *
- * @param string $sname the student name
+ * @param string $sra Student register number
  *
- * @return bool
+ * @return int
  * */
-function is_student_acc_disabled(string $sname): bool {
-	$mysql		= connect_db();
-	$select_status	= "SELECT student_active
-		FROM student_tbl WHERE student_name = ?";
+function is_student_acc_disabled(string $sra): int {
+	$disabled = \Database\Enums\STUDENT_ACC::DISABLED->value;
+	$enabled = \Database\Enums\STUDENT_ACC::ENABLED->value;
 
-	$stmt = $mysql->prepare($select_status);
+	$acc_query = "SELECT student_active FROM student_tbl WHERE student_ra = ?";
 
-	$stmt->bind_param("s", $sname);
-	$stmt->execute();
+	$acc_status = query_with_ra($acc_query, $sra);
 
-	$query	= $stmt->get_result();
-	$status = $query->fetch_array(MYSQLI_NUM);
-
-	$stmt->close();
-
-	return (intval($status[0]) === 0);
+	return ($acc_status[0] == $disabled ? $disabled : $enabled);
 }
 
 ?>

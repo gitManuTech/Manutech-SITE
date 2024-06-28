@@ -12,7 +12,7 @@
 
 1. Add javascript to where it is needed
 2. Verify if the length of the data at "problem.php"
-3. Validate HTML forms at "login.html", "register.html" and "problem-found.php"
+3. Verify for bad characters at all forms
 
 ## PHP
 
