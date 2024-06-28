@@ -7,6 +7,7 @@ require_once "../Database/db-query-check.php";
 require_once "../Enums/database.php";
 
 use Database\Enums;
+use Database\Checkage;
 
 $has_no_reg = Database\Enums\STUDENT_STAT::HAS_NO_REG;
 $acc_disabled = Database\Enums\STUDENT_ACC::DISABLED;
@@ -15,12 +16,12 @@ $name	= trim($_POST["student-name"]);
 $ra	= trim($_POST["student-ra"]);
 $course = trim($_POST["student-course"]);
 
-if(is_student_registered($ra) == $has_no_reg->value) {
+if(Database\Checkage\is_student_registered($ra) == $has_no_reg->value) {
 	echo "Estundate não está registrado.";
 	exit(1);
 }
 
-if(is_student_acc_disabled($ra) === $acc_disabled->value) {
+if(Database\Checkage\is_student_acc_disabled($ra) === $acc_disabled->value) {
 	echo "Conta do estudante foi desabilitada.";
 	exit(1);
 }
