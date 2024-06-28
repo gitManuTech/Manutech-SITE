@@ -1,6 +1,10 @@
 <?php
 
+require_once "../Database/db-student-queries.php";
+require_once "../Enums/database.php";
 require_once "db-connect.php";
+
+use Database\Enums;
 
 /**
  * This function will check if the student is already registered in the DB
@@ -9,26 +13,19 @@ require_once "db-connect.php";
  * @version	2.1.0				Will return an int that represents the student row
  * @since	1.0.0
  *
- * @param string $ra the student register number ("registro estudantil" on my language)
+ * @param string $sra Student register number
  *
  * @return int
  * */
 function is_student_registered(string $sra): int {
-	$mysql		= connect_db();
-	$search_acc	= "SELECT COUNT(1) FROM student_tbl WHERE student_ra = ?";
+	$has_reg = \Database\Enums\STUDENT_STAT::HAS_REG->value;
+	$has_no_reg = \Database\Enums\STUDENT_STAT::HAS_NO_REG->value;
 
-	$stmt = $mysql->prepare($search_acc);
+	$search_acc = "SELECT COUNT(1) FROM student_tbl WHERE student_ra = ?";
 
-	$stmt->bind_param("s", $sra);
-	$stmt->execute();
+	$student_row = query_with_ra($search_acc, $sra);
 
-	$data		= $stmt->get_result();
-	$acc_exist	= $data->fetch_array(MYSQLI_NUM);
-
-	$stmt->close();
-	$mysql->close();
-
-	return $acc_exist[0];
+	return ($student_row[0] == $has_reg ? $has_reg : $has_no_reg);
 }
 
 /**
@@ -40,25 +37,19 @@ function is_student_registered(string $sra): int {
  * @version	1.0.0				Will return an bool that represents the account status
  * @since	1.0.0
  *
- * @param string $sname the student name
+ * @param string $sra Student register number
  *
- * @return bool
+ * @return int
  * */
-function is_student_acc_disabled(string $sra): bool {
-	$mysql		= connect_db();
-	$acc_status	= "SELECT student_active FROM student_tbl WHERE student_ra = ?";
+function is_student_acc_disabled(string $sra): int {
+	$disabled = \Database\Enums\STUDENT_ACC::DISABLED->value;
+	$enabled = \Database\Enums\STUDENT_ACC::ENABLED->value;
 
-	$stmt = $mysql->prepare($acc_status);
+	$acc_query = "SELECT student_active FROM student_tbl WHERE student_ra = ?";
 
-	$stmt->bind_param("s", $sra);
-	$stmt->execute();
+	$acc_status = query_with_ra($acc_query, $sra);
 
-	$query	= $stmt->get_result();
-	$status = $query->fetch_array(MYSQLI_NUM);
-
-	$stmt->close();
-
-	return (intval($status[0]) === 0);
+	return ($acc_status[0] == $disabled ? $disabled : $enabled);
 }
 
 ?>
