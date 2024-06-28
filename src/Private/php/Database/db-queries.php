@@ -20,7 +20,6 @@ require_once "db-connect.php";
  * */
 function get_credentials(string $sra): mysqli_result | bool {
 	$mysql		= connect_db();
-
 	$select_data	= "SELECT student_id, student_name, student_ra, student_course
 		FROM student_tbl WHERE student_ra = ?";
 

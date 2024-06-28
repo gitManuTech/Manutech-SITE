@@ -1,4 +1,4 @@
-<?php
+<?php namespace Database\Checkage;
 
 require_once "../Database/db-student-queries.php";
 require_once "../Enums/database.php";
