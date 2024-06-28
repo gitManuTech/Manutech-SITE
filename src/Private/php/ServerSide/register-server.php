@@ -4,15 +4,21 @@ session_start();
 
 require_once "../Database/db-queries.php";
 require_once "../Database/db-query-check.php";
+require_once "../Database/db-status.php";
+
+use Database\Enums;
+
 // require_once "json.php";
 
 // $student_data = get_json();
+
+$student_exist = Database\Enums\STUDENT_STATUS::STUDENT_EXIST;
 
 $name	= trim($_POST["student-name"]);
 $ra	= trim($_POST["student-ra"]);
 $course = trim($_POST["student-course"]);
 
-if(is_student_registered($ra) == 1) {
+if(Database\Checkage\is_student_registered($ra) == $student_exist->value) {
 	echo "Estudante já possui conta.";
 	exit(1);
 }
