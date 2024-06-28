@@ -41,7 +41,7 @@ function select_all_student_posts(): mysqli_result {
 function select_posts(int $uid): mysqli_result {
 	$mysql		= connect_db();
 	$stu_posts	= "SELECT problem_title Title, problem_desc DSC, problem_block Block
-		FROM problem_tbl WHERE problem_tbl.student_id = ? LIMIT 10";
+			FROM problem_tbl WHERE problem_tbl.student_id = ? LIMIT 10";
 
 	$stmt = $mysql->prepare($stu_posts);
 
@@ -89,20 +89,49 @@ function send_problem_data(string $ptitle, string $pblock, string $pdesc, int $u
  * @since	1.3.0
  *
  * @param string $course_to_update
- * @param int  $sra
+ * @param string $sra Student register number
  * */
-function update_course(string $course_to_update, int $sra): void {
+function update_course(string $course_to_update, string $sra): void {
 	$mysql		= connect_db();
 	$alter_course	= "UPDATE student_tbl SET student_course = ? WHERE student_ra = ?";
 
 	$stmt = $mysql->prepare($alter_course);
 
-	$stmt->bind_param("si", $course_to_update, $sra);
+	$stmt->bind_param("ss", $course_to_update, $sra);
 	$stmt->execute();
 	$stmt->close();
 	$mysql->close();
 
 	$mysql = NUll;
+}
+
+/**
+ * This function will search in the Database with only the RA
+ *
+ * This function will search in the DB with just the RA
+ *
+ * @author	João Paulo Ferrari Sant'Ana	joaopauloferrarisantana.dev@gmail.com
+ * @version	1.0.0
+ * @since	2.0.0
+ *
+ * @param string $query Query to make in the DB
+ * @param string $sra Student register number
+ *
+ * @returns array (MYSQLI_NUM)
+ * */
+function query_with_ra(string $query, string $sra): array {
+	$mysql	= connect_db();
+	$stmt	= $mysql->prepare($query);
+
+	$stmt->bind_param("s", $sra);
+	$stmt->execute();
+
+	$data = $stmt->get_result();
+
+	$stmt->close();
+	$mysql->close();
+
+	return $data->fetch_array(MYSQLI_NUM);
 }
 
 ?>
