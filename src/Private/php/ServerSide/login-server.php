@@ -4,13 +4,13 @@ session_start();
 
 require_once "../Database/db-queries.php";
 require_once "../Database/db-query-check.php";
-require_once "../Enums/database.php";
+require_once "../Enums/UserAccStat.php";
 
-use Database\Enums;
 use Database\Checkage;
+use Enums\UserAccStat;
 
-$has_no_reg = Database\Enums\STUDENT_STAT::HAS_NO_REG;
-$acc_disabled = Database\Enums\STUDENT_ACC::DISABLED;
+$has_no_reg = Enums\UserAccStat\StudentStat::HAS_NO_REG;
+$acc_disabled = Enums\UserAccStat\StudentAcc::DISABLED;
 
 $name	= trim($_POST["student-name"]);
 $ra	= trim($_POST["student-ra"]);
