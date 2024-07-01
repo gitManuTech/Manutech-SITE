@@ -15,24 +15,24 @@ require_once "../Links/gen-links.php";
  * @param string $author The student who warned about the problem
  * */
 function generate_post_home(string $title, string $desc, string $block, string $author): void {
-echo "
-<div class=\"post\">
-	<div class=\"post-header\">
-		<h2 class=\"post-title\" >
-			<a href=\"".gen_post_link($title, $block, $desc)."\" class=\"no-link\">
-				<span class=\"title\">
-					{$title}
+echo '
+<div class="post">
+	<div class="post-header">
+		<h2 class="post-title" >
+			<a href="'.gen_post_link($title, $block, $desc).'" class="no-link">
+				<span class="title">'
+					.$title.'
 				</span>
-				<span class=\"author\">
-					({$author})
+				<span class="author">
+					('.$author.')
 				<span>
 			</a>
 		</h2>
 	</div>
-	<div class=\"post-desc\">
-		<p class=\"post-text\">{$desc}</p>
+	<div class="post-desc">
+		<p class="post-text">'.$desc.'</p>
 	</div>
-</div>";
+</div>';
 }
 
 
@@ -48,22 +48,22 @@ echo "
  * @param string $block The block where the problem occured
  * */
 function generate_post_profile(string $title, string $desc, string $block): void {
-echo "
-<div class=\"post\">
-	<div class=\"post-header-container\">
-		<div class=\"post-header\">
-			<h2 class=\"post-title\">
-				<a class=\"no-link\" href=\"".gen_post_link($title, $block, $desc)."\">
-					{$title}
-				</a>
+echo '
+<div class="post">
+	<div class="post-header-container">
+		<div class="post-header">
+			<h2 class="post-title">
+				<a class="no-link" href="'.gen_post_link($title, $block, $desc).'">'
+					.$title.
+				'</a>
 			</h2>
 		</div>
 	</div>
-	<div class=\"post-desc\">
-		<p class=\"post-text\">{$desc}</p>
+	<div class="post-desc">
+		<p class="post-text">'.$desc.'</p>
 	</div>
 
-</div>";
+</div>';
 }
 
 ?>
