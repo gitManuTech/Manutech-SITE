@@ -24,7 +24,7 @@ function is_student_registered(string $sra): int {
 
 	$search_acc = "SELECT COUNT(1) FROM student_tbl WHERE student_ra = ?";
 
-	$student_row = \Database\StudentQuery\query_with_ra($search_acc, $sra);
+	$student_row = query_with_ra($search_acc, $sra);
 
 	return ($student_row[0] == $has_reg ? $has_reg : $has_no_reg);
 }
@@ -48,7 +48,7 @@ function is_student_acc_disabled(string $sra): int {
 
 	$acc_query = "SELECT student_active FROM student_tbl WHERE student_ra = ?";
 
-	$acc_status = \Database\StudentQuery\query_with_ra($acc_query, $sra);
+	$acc_status = query_with_ra($acc_query, $sra);
 
 	return ($acc_status[0] == $disabled ? $disabled : $enabled);
 }
