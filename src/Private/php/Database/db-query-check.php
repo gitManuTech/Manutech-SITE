@@ -1,10 +1,11 @@
 <?php namespace Database\Checkage;
 
 require_once "../Database/db-student-queries.php";
-require_once "../Enums/database.php";
+require_once "../Enums/UserAccStat.php";
 require_once "db-connect.php";
 
-use Database\Enums;
+use Enums\UserAccStat;
+use Database\StudentQuery;
 
 /**
  * This function will check if the student is already registered in the DB
@@ -18,12 +19,12 @@ use Database\Enums;
  * @return int
  * */
 function is_student_registered(string $sra): int {
-	$has_reg = \Database\Enums\STUDENT_STAT::HAS_REG->value;
-	$has_no_reg = \Database\Enums\STUDENT_STAT::HAS_NO_REG->value;
+	$has_reg = \Enums\UserAccStat\StudentStat::HAS_REG->value;
+	$has_no_reg = \Enums\UserAccStat\StudentStat::HAS_NO_REG->value;
 
 	$search_acc = "SELECT COUNT(1) FROM student_tbl WHERE student_ra = ?";
 
-	$student_row = query_with_ra($search_acc, $sra);
+	$student_row = \Database\StudentQuery\query_with_ra($search_acc, $sra);
 
 	return ($student_row[0] == $has_reg ? $has_reg : $has_no_reg);
 }
@@ -42,12 +43,12 @@ function is_student_registered(string $sra): int {
  * @return int
  * */
 function is_student_acc_disabled(string $sra): int {
-	$disabled = \Database\Enums\STUDENT_ACC::DISABLED->value;
-	$enabled = \Database\Enums\STUDENT_ACC::ENABLED->value;
+	$disabled = \Enums\UserAccStat\StudentAcc::DISABLED->value;
+	$enabled = \Enums\UserAccStat\StudentAcc::ENABLED->value;
 
 	$acc_query = "SELECT student_active FROM student_tbl WHERE student_ra = ?";
 
-	$acc_status = query_with_ra($acc_query, $sra);
+	$acc_status = \Database\StudentQuery\query_with_ra($acc_query, $sra);
 
 	return ($acc_status[0] == $disabled ? $disabled : $enabled);
 }
