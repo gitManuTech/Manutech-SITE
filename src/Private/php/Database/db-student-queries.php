@@ -68,15 +68,16 @@ function select_posts(int $uid): mysqli_result {
  * @param string $pdesc The description of the problem
  * @param int $uid The student id that is in the DB
  * */
-function send_problem_data(string $ptitle, string $pblock, string $pdesc, int $uid): void {
+function send_problem_data(string $ptitle, string $pblock, string $pdesc,
+				string $purgen, int $uid): void {
 	$mysql		= connect_db();
 	$complain	= "INSERT INTO
-		problem_tbl(problem_title, problem_block, problem_desc, student_id)
-		VALUES(?, ?, ?, ?)";
+		problem_tbl(problem_title, problem_block, problem_desc, problem_urgency, student_id)
+		VALUES(?, ?, ?, ?, ?)";
 
 	$stmt = $mysql->prepare($complain);
 
-	$stmt->bind_param("sssi", $ptitle, $pblock, $pdesc, $uid);
+	$stmt->bind_param("ssssi", $ptitle, $pblock, $pdesc, $purgen, $uid);
 	$stmt->execute();
 	$stmt->close();
 }
