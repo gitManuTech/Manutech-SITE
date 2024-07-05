@@ -1,8 +1,9 @@
--- MariaDB dump 10.19-11.3.2-MariaDB, for Linux (x86_64)
+/*!999999\- enable the sandbox mode */ 
+-- MariaDB dump 10.19-11.4.2-MariaDB, for Linux (x86_64)
 --
 -- Host: localhost    Database: handyman
 -- ------------------------------------------------------
--- Server version	11.3.2-MariaDB
+-- Server version	11.4.2-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -13,7 +14,7 @@
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+/*M!100616 SET @OLD_NOTE_VERBOSITY=@@NOTE_VERBOSITY, NOTE_VERBOSITY=0 */;
 
 --
 -- Table structure for table `problem_tbl`
@@ -23,25 +24,17 @@ DROP TABLE IF EXISTS `problem_tbl`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `problem_tbl` (
-  `problem_id` int(11) NOT NULL,
+  `problem_id` int(11) NOT NULL AUTO_INCREMENT,
   `problem_title` varchar(32) DEFAULT NULL,
   `problem_block` char(2) DEFAULT NULL,
   `problem_desc` tinytext DEFAULT NULL,
+  `problem_level` enum('low','medium','urgent') DEFAULT NULL,
   `student_id` int(11) NOT NULL,
   PRIMARY KEY (`problem_id`),
   KEY `student_id` (`student_id`),
   CONSTRAINT `problem_tbl_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `student_tbl` (`student_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `problem_tbl`
---
-
-LOCK TABLES `problem_tbl` WRITE;
-/*!40000 ALTER TABLE `problem_tbl` DISABLE KEYS */;
-/*!40000 ALTER TABLE `problem_tbl` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `student_tbl`
@@ -58,19 +51,8 @@ CREATE TABLE `student_tbl` (
   `student_active` tinyint(1) DEFAULT 1,
   PRIMARY KEY (`student_id`),
   UNIQUE KEY `student_ra` (`student_ra`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `student_tbl`
---
-
-LOCK TABLES `student_tbl` WRITE;
-/*!40000 ALTER TABLE `student_tbl` DISABLE KEYS */;
-INSERT INTO `student_tbl` VALUES
-(3,'John','2870412','Ciências da Computação',1);
-/*!40000 ALTER TABLE `student_tbl` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -79,6 +61,6 @@ UNLOCK TABLES;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+/*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2024-05-27 13:24:47
+-- Dump completed on 2024-07-04 17:23:08
