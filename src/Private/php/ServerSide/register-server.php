@@ -5,15 +5,14 @@ session_start();
 require_once "../Database/db-queries.php";
 require_once "../Database/db-query-check.php";
 require_once "../Enums/UserAccStat.php";
-// require_once "json.php";
+// require_once "../json.php";
 
-use Enums\UserAccStat;
 use Database\Checkage;
+use Enums\UserAccStat;
+
+$has_reg = Enums\UserAccStat\StudentStat::HAS_REG;
 
 // $student_data = get_json();
-
-$has_reg = Enums\UserAccStat\STUDENT_STAT::HAS_REG;
-
 $name	= trim($_POST["student-name"]);
 $ra	= trim($_POST["student-ra"]);
 $course = trim($_POST["student-course"]);

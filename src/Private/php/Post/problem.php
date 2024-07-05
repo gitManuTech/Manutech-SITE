@@ -79,14 +79,38 @@
 
 						<div class="problem-area">
 
-							<label for="problem-description">Descreva o problema</label>
+							<div id="problem-desc-container">
 
-							<textarea
-							id="problem-description" class="complain-description"
-							name="problem-descriptor"
-							placeholder="Dê uma descrição detalhada ao problema"
-							data-problem="desc">
-							</textarea>
+								<label for="problem-description">Descreva o problema</label>
+
+								<textarea
+								id="problem-description" class="complain-description"
+								name="problem-descriptor"
+								placeholder="Dê uma descrição detalhada ao problema"
+								data-problem="desc">
+								</textarea>
+
+							</div>
+
+							<div id="problem-severity-container">
+
+								<h3>Severidade da reclamação</h3>
+
+								<div class="severity">
+
+									<input type="radio" value="Pequena" id="small-urgency" name="urgency">
+									<label for="small-urgency">Ignorável</label>
+
+									<input type="radio" value="Media" id="medium-urgency" name="urgency">
+									<label for="medium-urgency">Importante</label>
+
+									<!--Best name convention evar!!! -->
+									<input type="radio" value="Urgente" id="urgent-urgency" name="urgency">
+									<label for="urgent-urgency">Tratar imediatamente</label>
+
+								</div>
+
+							</div>
 
 						</div>
 
