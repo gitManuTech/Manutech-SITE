@@ -49,7 +49,7 @@ require_once "../DisplayData/display.php";
 					</li>
 
 					<li><a href="../Student/account-config.php">Configurações</a></li>
-					<li><a href="../../Public/html/">Página Inicial</a></li>
+					<li><a href="../../../Public/html/">Página Inicial</a></li>
 
 				</ol>
 
