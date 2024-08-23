@@ -49,12 +49,16 @@ $uid = $_SESSION["uid"];
 				<div id="redirects">
 					<div id="post-problem">
 						<p class="look-like-btn">
-							<a href="../Post/problem.php" class="no-link">Achou um problema? Avise aqui!</a>
+							<a href="../Post/problem.php" class="no-link">
+								Achou um problema? Avise aqui!
+							</a>
 						</p>
 					</div>
 					<div id="see-posts">
 						<p class="look-like-btn">
-							<a href="../Home/home.php" class="no-link">Ver reclamações de outros alunos</a>
+							<a href="../Home/home.php" class="no-link">
+								Ver reclamações de outros alunos
+							</a>
 						</p>
 					</div>
 				</div>
