@@ -1,6 +1,7 @@
 <?php
 
 require_once "db-connect.php";
+require_once "db-student-queries.php";
 
 /**
  * This function get student information from DB
@@ -19,21 +20,11 @@ require_once "db-connect.php";
  * @return mysqli_result|bool
  * */
 function get_credentials(string $sra): mysqli_result | bool {
-	$mysql		= connect_db();
-	$select_data	= "SELECT student_id, student_name, student_ra, student_course
+	$mysql = connect_db();
+	$query = "SELECT student_id, student_name, student_ra, student_course
 		FROM student_tbl WHERE student_ra = ?";
 
-	$stmt = $mysql->prepare($select_data);
-
-	$stmt->bind_param("s", $sra);
-	$stmt->execute();
-
-	$student_data = $stmt->get_result();
-
-	$stmt->close();
-	$mysql->close();
-
-	$mysql = NULL;
+	$student_data = query_with_ra($query, $sra):
 
 	return $student_data;
 }
