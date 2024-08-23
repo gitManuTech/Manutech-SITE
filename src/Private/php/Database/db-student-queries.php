@@ -109,7 +109,7 @@ function update_course(string $course_to_update, string $sra): void {
 /**
  * This function will search in the Database with only the RA
  *
- * This function will search in the DB with just the RA
+ * This function will search and return with the query result
  *
  * @author	João Paulo Ferrari Sant'Ana	joaopauloferrarisantana.dev@gmail.com
  * @version	1.0.0
@@ -133,6 +133,14 @@ function query_with_ra(string $query, string $sra): array {
 	$mysql->close();
 
 	return $data->fetch_array(MYSQLI_NUM);
+}
+
+function modify_with_ra(string $query, string $sra): void {
+	$mysql = connect_db();
+	$stmt = $mysql->prepare($query);
+
+	$stmt->bind_param("s", $sra);
+	$stmt->execute();
 }
 
 ?>
