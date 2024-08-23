@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -46,7 +47,7 @@
 		<main>
 
 			<form id="form-problem-found" method="POST"
-				action="../ServerSide/reg-complain-server.php" autocomplete="off">
+				action="../ServerSide/register-comp-server.php" autocomplete="off">
 
 				<div class="form-aggregate">
 
@@ -104,13 +105,14 @@
 									<input type="radio" value="Media" id="medium-urgency" name="urgency">
 									<label for="medium-urgency">Importante</label>
 
-									<!--Best name convention evar!!! -->
 									<input type="radio" value="Urgente" id="urgent-urgency" name="urgency">
 									<label for="urgent-urgency">Tratar imediatamente</label>
 
 								</div>
 
 							</div>
+
+							<input type="hidden" value="<?= $_SESSION["uid"]; ?>" name="uid">
 
 						</div>
 

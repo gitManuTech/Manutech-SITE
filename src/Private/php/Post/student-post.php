@@ -4,7 +4,7 @@
 
 	<head>
 
-		<title>Reclamação: <?php echo $_GET["ptitle"]; ?></title>
+		<title>Reclamação: <?= $_GET["ptitle"]; ?></title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="ManuTech Student post">
@@ -49,13 +49,13 @@
 
 				<header class="post-header">
 
-					<h2><?php echo $formated_title ?></h2>
+					<h2><?= $formated_title ?></h2>
 
 				</header>
 
 				<div class="post-text" id="post-context">
 
-					<p><?php echo $_GET["pdesc"]; ?></p>
+					<p><?= $_GET["pdesc"]; ?></p>
 
 				</div>
 
