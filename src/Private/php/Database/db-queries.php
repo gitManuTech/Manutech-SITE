@@ -20,7 +20,6 @@ require_once "db-student-queries.php";
  * @return mysqli_result|bool
  * */
 function get_credentials(string $sra): mysqli_result | bool {
-	$mysql = connect_db();
 	$query = "SELECT student_id, student_name, student_ra, student_course
 		FROM student_tbl WHERE student_ra = ?";
 
@@ -48,7 +47,7 @@ function insert_into_db(string $sname, string $sra, string $scourse): void {
 	$insert = "INSERT INTO
 		student_tbl(student_name, student_ra, student_course) VALUES(?, ?, ?)";
 
-	$stmt	= $mysql->prepare($insert);
+	$stmt = $mysql->prepare($insert);
 
 	$stmt->bind_param("sss", $sname, $sra, $scourse);
 	$stmt->execute();
@@ -70,17 +69,9 @@ function insert_into_db(string $sname, string $sra, string $scourse): void {
  * @param string $sname
  * */
 function disable_student_acc(string $sra): void {
-	$mysql	= connect_db();
-	$update	= "UPDATE student_tbl SET student_active = 0 WHERE student_ra = ?";
-
-	$stmt = $mysql->prepare($update);
-
-	$stmt->bind_param("s", $sra);
-	$stmt->execute();
-	$stmt->close();
-	$mysql->close();
-
-	$mysql = NULL;
+	$acc_status = "UPDATE student_tbl SET student_active = 0 WHERE student_ra = ?";
+	
+	modify_with_ra($acc_status, $ra);
 }
 
 ?>
